@@ -1,0 +1,83 @@
+---
+layout: default
+title: About
+permalink: /about/
+---
+{% assign a = site.data.about %}
+<div class="wrap wrap--media" style="padding-top:28px">
+  <figure class="banner">
+    <img src="{{ '/assets/img/campus-pixel.webp' | relative_url }}" alt="Pixel-art path from a Santa Clara–style mission campus to a lakeside Gothic campus">
+    <figcaption>Santa Clara → Evanston</figcaption>
+  </figure>
+
+  <section class="about-top">
+    <img class="about-photo" src="{{ '/assets/img/headshot.jpg' | relative_url }}" alt="Elias Pedroza at Santa Clara University">
+    <div>
+      <h1>Hi, I'm Elias.</h1>
+      <!-- ✏️ Intro text: edit these two paragraphs directly -->
+      <p>I'm a robotics engineer with a mechanical engineering foundation, currently pursuing an M.S. in Robotics at Northwestern University. I graduated cum laude in Mechanical Engineering from Santa Clara University.</p>
+      <p>My work sits between hardware and software: designing mechanisms, building and debugging electromechanical systems, and increasingly, the controls and manipulation that make them useful. Outside of projects, I've served as Community Outreach Director for SHPE and Secretary of ASME, and I've mentored students in SCU's Summer Engineering Seminar.</p>
+      <div class="about-actions">
+        <a class="btn btn--primary" href="{{ site.resume | relative_url }}" target="_blank" rel="noopener">Resume (PDF)</a>
+        <a class="btn" href="https://www.linkedin.com/in/{{ site.linkedin }}">LinkedIn</a>
+        <a class="btn" href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <h2>Experience</h2>
+    <ul class="timeline">
+      {% for e in a.experience %}
+      <li>
+        <span class="when">{{ e.when }}</span>
+        <div class="timeline-body{% if e.image %} has-image{% endif %}">
+          <div>
+            <h3>{{ e.title }}</h3>
+            <p class="org">{% if e.org_url %}<a href="{{ e.org_url }}">{{ e.org }}</a>{% else %}{{ e.org }}{% endif %}{% if e.location %} · {{ e.location }}{% endif %}</p>
+            <p>{{ e.text }}{% if e.project %} <a href="{{ e.project | relative_url }}">See the project →</a>{% endif %}</p>
+          </div>
+          {% if e.image %}<figure class="timeline-img"><img src="{{ e.image | relative_url }}" alt="{{ e.org }}">{% if e.image_credit %}<figcaption>{{ e.image_credit }}</figcaption>{% endif %}</figure>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="about-section">
+    <h2>Education</h2>
+    <ul class="timeline">
+      {% for ed in a.education %}
+      <li>
+        <span class="when">{{ ed.when }}</span>
+        <div><h3>{{ ed.degree }}</h3><p class="org">{{ ed.school }} · {{ ed.location }}</p></div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="about-section">
+    <h2>Skills</h2>
+    <dl class="skills">
+      {% for sk in a.skills %}<dt>{{ sk.area }}</dt><dd>{{ sk.list }}</dd>{% endfor %}
+    </dl>
+  </section>
+
+  <section class="about-section">
+    <h2>Leadership &amp; interests</h2>
+    <ul class="plain-list">
+      {% for l in a.leadership %}<li>{{ l }}</li>{% endfor %}
+    </ul>
+  </section>
+
+  {% if a.photos %}
+  <section class="about-section">
+    <h2>Photos</h2>
+    <div class="photo-grid">
+      {% for ph in a.photos %}
+      <figure><img src="{{ ph.src | relative_url }}" alt="{{ ph.caption }}" loading="lazy">{% if ph.caption %}<figcaption>{{ ph.caption }}</figcaption>{% endif %}</figure>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+</div>

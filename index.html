@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<section class="intro wrap">
+  <img class="intro-photo" src="{{ '/assets/img/headshot-square.jpg' | relative_url }}" alt="Elias Pedroza">
+  <div>
+    <h1 class="intro-name">Elias Pedroza</h1>
+    <p class="intro-line">M.S. Robotics · Northwestern University</p>
+    <p class="intro-line">B.S. Mechanical Engineering · Santa Clara University</p>
+  </div>
+</section>
+
+<section id="projects" class="wrap">
+  {% assign all = site.projects | sort: "order" %}
+  <div class="grid">
+    {% for p in all %}{% if p.featured %}{% assign card_small = false %}{% include project-card.html %}{% endif %}{% endfor %}
+  </div>
+
+  <h2 class="section-label">More projects</h2>
+  <div class="grid grid--small">
+    {% for p in all %}{% unless p.featured %}{% assign card_small = true %}{% include project-card.html %}{% endunless %}{% endfor %}
+  </div>
+</section>

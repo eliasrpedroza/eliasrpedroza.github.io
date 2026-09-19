@@ -1,0 +1,48 @@
+# ─────────────────────────────────────────────────────────────
+#  Site settings — edit these, then push. GitHub rebuilds the site.
+# ─────────────────────────────────────────────────────────────
+title: Elias Pedroza
+tagline: Robotics Engineer
+description: >-
+  Robotics portfolio of Elias Pedroza. M.S. Robotics student at Northwestern
+  University; B.S. Mechanical Engineering, Santa Clara University.
+url: "https://eliasrpedroza.github.io"
+baseurl: ""
+
+# Contact links (shown in the header and footer)
+email: eliasrpedroza@gmail.com
+linkedin: eliasrpedroza
+github: eliasrpedroza
+
+# Swap this file to update your resume everywhere on the site.
+resume: /assets/Elias_Pedroza_Resume.pdf
+
+# ─────────────────────────────────────────────────────────────
+#  Projects: every file in _projects/ becomes a page at /projects/<file-name>/
+# ─────────────────────────────────────────────────────────────
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+exclude:
+  - README.md
+  - PUBLISHING.md
+  - HOW-TO-EDIT.md
+  - _preview
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - preview_build.py

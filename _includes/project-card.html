@@ -1,0 +1,11 @@
+<a class="card{% if card_small %} card--small{% endif %}" href="{{ p.url | relative_url }}">
+  <div class="card-media">
+    <img src="{{ p.thumb | relative_url }}" alt="{{ p.title }}" >
+  </div>
+  <div class="card-body">
+    <p class="card-context">{{ p.context }}</p>
+    <h3 class="card-title">{{ p.title }}</h3>
+    {% unless card_small %}<p class="card-summary">{{ p.summary }}</p>{% endunless %}
+    {% if p.tags %}<ul class="tags">{% for t in p.tags limit: 4 %}<li>{{ t }}</li>{% endfor %}</ul>{% endif %}
+  </div>
+</a>

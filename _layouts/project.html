@@ -1,0 +1,57 @@
+---
+layout: default
+---
+<article class="project">
+  <div class="wrap wrap--text">
+    <a class="back" href="{{ '/' | relative_url }}#projects">← All projects</a>
+    <p class="eyebrow">{{ page.context }}</p>
+    <h1 class="project-title">{{ page.title }}</h1>
+    <p class="lead">{{ page.summary }}</p>
+  </div>
+
+  <div class="wrap wrap--media">
+    {% if page.hero_video %}
+    <figure class="hero{% if page.hero_portrait %} hero--portrait{% endif %}">
+      <video src="{{ page.hero_video | relative_url }}" poster="{{ page.hero_poster | relative_url }}" autoplay muted loop playsinline controls></video>
+      {% if page.hero_caption %}<figcaption>{{ page.hero_caption }}</figcaption>{% endif %}
+    </figure>
+    {% elsif page.hero_image %}
+    <figure class="hero">
+      <img src="{{ page.hero_image | relative_url }}" alt="{{ page.title }}">
+      {% if page.hero_caption %}<figcaption>{{ page.hero_caption }}</figcaption>{% endif %}
+    </figure>
+    {% endif %}
+  </div>
+
+  <div class="wrap wrap--text">
+    <dl class="facts">
+      {% if page.role %}<div><dt>Role</dt><dd>{{ page.role }}</dd></div>{% endif %}
+      {% if page.timeline %}<div><dt>Timeline</dt><dd>{{ page.timeline }}</dd></div>{% endif %}
+      {% if page.team %}<div><dt>Team</dt><dd>Group project with {{ page.team | array_to_sentence_string }}{% if page.team_note %}<br><span class="fact-note">{{ page.team_note }}</span>{% endif %}</dd></div>{% endif %}
+      {% if page.tags %}<div><dt>Tools</dt><dd><ul class="tags">{% for t in page.tags %}<li>{{ t }}</li>{% endfor %}</ul></dd></div>{% endif %}
+    </dl>
+
+    {% if page.results %}
+    <section class="results">
+      <h2>Results</h2>
+      <ul>{% for r in page.results %}<li>{{ r | markdownify | remove: '<p>' | remove: '</p>' }}</li>{% endfor %}</ul>
+    </section>
+    {% endif %}
+
+    <div class="prose">
+      {{ content }}
+    </div>
+
+    {% if page.gallery %}
+    <section class="prose">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        {% for g in page.gallery %}<figure><img src="{{ g.src | relative_url }}" alt="{{ g.caption | default: page.title }}" loading="lazy">{% if g.caption %}<figcaption>{{ g.caption }}</figcaption>{% endif %}</figure>{% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% if page.repo %}<p class="repo-link"><a href="{{ page.repo }}">View source &amp; documentation on GitHub →</a></p>{% endif %}
+    <a class="back back--bottom" href="{{ '/' | relative_url }}#projects">← All projects</a>
+  </div>
+</article>
