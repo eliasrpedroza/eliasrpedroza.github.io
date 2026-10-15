@@ -72,7 +72,10 @@ wide: true   # wider page column so the two-across grid has room
 
 <div class="demo-grid">
   <div class="demo">
-    <a class="demo-media-link demo-media-link--diagram" href="/assets/img/projects/circuits/opamp-tinkercad.png"><img class="demo-media" src="/assets/img/projects/circuits/opamp-tinkercad.png" alt="TinkerCAD simulation of the op-amp difference amplifier: V1 = 8.99 V, V2 = 1.99 V, output 7.00 V"></a>
+    <div class="demo-media slideshow">
+      <a class="slide slide--contain is-active" href="/assets/img/projects/circuits/opamp-tinkercad.png" data-label="TinkerCAD simulation"><img src="/assets/img/projects/circuits/opamp-tinkercad.png" alt="TinkerCAD simulation: V1 = 8.99 V, V2 = 1.99 V, output 7.00 V"></a>
+      <a class="slide" href="/assets/img/projects/circuits/c-031.jpg" data-label="Breadboard build"><img src="/assets/img/projects/circuits/c-031.jpg" alt="Op-amp difference amplifier built on a breadboard"></a>
+    </div>
     <div class="demo-text">
     <h3>Op-Amp Difference Amplifier</h3>
     <p>V<sub>out</sub> = V<sub>1</sub> − V<sub>2</sub> from two potentiometer inputs.</p>
@@ -80,7 +83,6 @@ wide: true   # wider page column so the two-across grid has room
       <li><strong>Supply:</strong> dual ±9 V rails; output swings ~+9 V to −9 V</li>
       <li><strong>Simulated in TinkerCAD:</strong> 8.99 V − 1.99 V → 7.00 V (shown); 4.00 V − 6.09 V → −2.09 V</li>
       <li><strong>Main challenge:</strong> building the negative supply rail</li>
-      <li><a href="/assets/img/projects/circuits/c-031.jpg">See the breadboard build →</a></li>
     </ul>
     </div>
   </div>

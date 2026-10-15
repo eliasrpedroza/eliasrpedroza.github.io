@@ -130,6 +130,13 @@ gallery:
 </div>
 ```
 - For a photo card, swap the `<video …>` line for `<a class="demo-media-link" href="/path/photo.jpg"><img class="demo-media" src="/path/photo.jpg" alt="…"></a>` (clicking it opens the full-size photo).
+- For a **slideshow** that cross-fades between photos (like the op-amp card), use this in place of the media line. Add `slide--contain` to a slide to show the whole image instead of filling the frame; change the speed with `data-interval="3500"` (milliseconds) on the outer div:
+  ```html
+  <div class="demo-media slideshow">
+    <a class="slide is-active" href="/path/one.jpg" data-label="First label"><img src="/path/one.jpg" alt="…"></a>
+    <a class="slide" href="/path/two.jpg" data-label="Second label"><img src="/path/two.jpg" alt="…"></a>
+  </div>
+  ```
 - Clips with `data-autoplay` play silently while on screen; the controls allow pause and full screen.
 - Add `wide: true` to the page's settings block to give a grid page a wider column.
 

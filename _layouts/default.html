@@ -41,5 +41,29 @@
     vids.forEach(function (v) { io.observe(v); });
   })();
   </script>
+  <script>
+  // Slideshows: cross-fade every few seconds, pause on hover, dots to jump, click opens full size.
+  (function () {
+    document.querySelectorAll('.slideshow').forEach(function (box) {
+      var slides = box.querySelectorAll('.slide'); if (slides.length < 2) return;
+      var i = 0, timer = null, ms = +box.dataset.interval || 3500;
+      var label = document.createElement('span'); label.className = 'slide-label'; box.appendChild(label);
+      var dots = document.createElement('span'); dots.className = 'slide-dots'; box.appendChild(dots);
+      slides.forEach(function (s, k) {
+        var b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', 'Show ' + (s.dataset.label || 'slide ' + (k + 1)));
+        b.addEventListener('click', function () { show(k); restart(); }); dots.appendChild(b);
+      });
+      function show(k) {
+        i = k; slides.forEach(function (s, n) { s.classList.toggle('is-active', n === k); dots.children[n].setAttribute('aria-current', n === k); });
+        label.textContent = slides[k].dataset.label || ''; label.style.display = label.textContent ? '' : 'none';
+      }
+      function restart() { clearInterval(timer); if (!reduce) timer = setInterval(function () { show((i + 1) % slides.length); }, ms); }
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      box.addEventListener('mouseenter', function () { clearInterval(timer); });
+      box.addEventListener('mouseleave', restart);
+      show(0); restart();
+    });
+  })();
+  </script>
 </body>
 </html>
