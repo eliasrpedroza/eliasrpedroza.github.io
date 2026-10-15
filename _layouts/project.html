@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<article class="project">
+<article class="project{% if page.wide %} project--wide{% endif %}">
   <div class="wrap wrap--text">
     <a class="back" href="{{ '/' | relative_url }}#projects">← All projects</a>
     <p class="eyebrow">{{ page.context }}</p>

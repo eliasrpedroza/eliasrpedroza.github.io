@@ -113,20 +113,25 @@ gallery:
   - src: /assets/img/projects/iris/b.jpg
 ```
 
-**Video (or photo) with notes beside it**, like the circuits page:
+**Grid of video/photo cards with notes underneath**, like the circuits page (two across on laptops, one on phones):
 ```html
-<div class="demo demo--video">
-  <video class="demo-media" src="/assets/video/my-project/clip.mp4" poster="/assets/video/my-project/clip.jpg" muted loop playsinline controls preload="metadata" data-autoplay></video>
-  <div class="demo-text">
+<div class="demo-grid">
+  <div class="demo">
+    <video class="demo-media" src="/assets/video/my-project/clip.mp4" poster="/assets/video/my-project/clip.jpg" muted loop playsinline controls preload="metadata" data-autoplay></video>
+    <div class="demo-text">
     <h3>Clip title</h3>
     <p>One sentence on what it shows.</p>
     <ul>
       <li><strong>How:</strong> …</li>
     </ul>
+    </div>
   </div>
+  <!-- copy the <div class="demo"> … </div> block for each card -->
 </div>
 ```
-Video cards span the full width with the notes underneath. Clips with `data-autoplay` play silently while on screen; the controls let viewers pause, scrub, or go full screen. For a photo with notes beside it, use `<div class="demo">` (no `demo--video`) and swap the `<video …>` line for `<img class="demo-media" src="…" alt="…">`.
+- For a photo card, swap the `<video …>` line for `<a class="demo-media-link" href="/path/photo.jpg"><img class="demo-media" src="/path/photo.jpg" alt="…"></a>` (clicking it opens the full-size photo).
+- Clips with `data-autoplay` play silently while on screen; the controls allow pause and full screen.
+- Add `wide: true` to the page's settings block to give a grid page a wider column.
 
 ### Swap a picture
 Upload the new file **with the same name** to replace the old one. Nothing else needs to change.

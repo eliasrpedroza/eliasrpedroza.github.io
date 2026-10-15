@@ -11,118 +11,116 @@ results:
   - "**PWM motor and servo control** carried directly into [GOAL!](/projects/goal-penalty-shootout/)"
   - "**Analog timing on target:** RC delay ≈ 10 s, 555 one-shot ≈ 9–10 s"
   - "**8 circuits built and verified** across sensing, actuation, analog, and digital logic"
+wide: true   # wider page column so the two-across grid has room
 ---
 
-## Sensing & Microcontroller I/O
+## Sensing & Actuation
 
-<div class="demo demo--video">
-  <video class="demo-media" src="/assets/video/circuits/ultrasonic-lcd.mp4" poster="/assets/video/circuits/ultrasonic-lcd.jpg" muted loop playsinline controls preload="metadata" data-autoplay></video>
-  <div class="demo-text">
+<div class="demo-grid">
+  <div class="demo">
+    <video class="demo-media" src="/assets/video/circuits/ultrasonic-lcd.mp4" poster="/assets/video/circuits/ultrasonic-lcd.jpg" muted loop playsinline controls preload="metadata" data-autoplay></video>
+    <div class="demo-text">
     <h3>Ultrasonic Rangefinder with LCD</h3>
-    <p>An HC-SR04 sensor measures distance and displays it live on a 16-pin character LCD.</p>
+    <p>HC-SR04 distance shown live on a 16-pin character LCD.</p>
     <ul>
-      <li><strong>Distance:</strong> computed from echo time and the speed of sound, halved for the round trip</li>
-      <li><strong>Display:</strong> a potentiometer sets LCD contrast</li>
-      <li><strong>Verified:</strong> an object ~20 cm away, checked with a ruler</li>
+      <li><strong>Distance:</strong> echo time × speed of sound, halved for the round trip</li>
+      <li><strong>Display:</strong> potentiometer sets LCD contrast</li>
+      <li><strong>Verified:</strong> object at ~20 cm, checked with a ruler</li>
     </ul>
+    </div>
   </div>
-</div>
 
-<div class="demo demo--video">
-  <video class="demo-media" src="/assets/video/circuits/analog-io.mp4" poster="/assets/video/circuits/analog-io.jpg" muted loop playsinline controls preload="metadata" data-autoplay></video>
-  <div class="demo-text">
+  <div class="demo">
+    <video class="demo-media" src="/assets/video/circuits/analog-io.mp4" poster="/assets/video/circuits/analog-io.jpg" muted loop playsinline controls preload="metadata" data-autoplay></video>
+    <div class="demo-text">
     <h3>Analog I/O: Potentiometer-Dimmed LED</h3>
     <p>A potentiometer sets LED brightness through the microcontroller.</p>
     <ul>
-      <li><strong>Signal path:</strong> potentiometer → ADC reading → mapped to a PWM duty cycle → transistor-driven LED</li>
-      <li><strong>Result:</strong> perceived brightness tracks the duty cycle smoothly across the pot's range</li>
+      <li><strong>Signal path:</strong> pot → ADC → PWM duty cycle → transistor-driven LED</li>
+      <li><strong>Result:</strong> brightness tracks the duty cycle smoothly</li>
     </ul>
+    </div>
   </div>
-</div>
 
-<div class="demo demo--video">
-  <video class="demo-media" src="/assets/video/circuits/digital-io.mp4" poster="/assets/video/circuits/digital-io.jpg" muted loop playsinline controls preload="metadata" data-autoplay></video>
-  <div class="demo-text">
+  <div class="demo">
+    <video class="demo-media" src="/assets/video/circuits/digital-io.mp4" poster="/assets/video/circuits/digital-io.jpg" muted loop playsinline controls preload="metadata" data-autoplay></video>
+    <div class="demo-text">
     <h3>Digital I/O: Switch-Controlled LEDs</h3>
     <p>Two switches set the behavior of a pair of LEDs.</p>
     <ul>
       <li><strong>STOP/GO:</strong> both LEDs off in STOP</li>
       <li><strong>SLOW/FAST:</strong> ~3 s vs. ~1 s per LED state</li>
-      <li><strong>Hardware:</strong> LEDs driven through transistors; switch inputs conditioned so they never float</li>
+      <li><strong>Hardware:</strong> transistor-driven LEDs; switch inputs conditioned so they never float</li>
     </ul>
+    </div>
   </div>
-</div>
 
-## Motor & Servo Control
-
-<div class="demo">
-  <img class="demo-media" src="/assets/img/projects/circuits/c-035.jpg" alt="Microcontroller driving a motor and servo">
-  <div class="demo-text">
+  <div class="demo">
+    <a class="demo-media-link" href="/assets/img/projects/circuits/c-035.jpg"><img class="demo-media" src="/assets/img/projects/circuits/c-035.jpg" alt="DC Motor & Servo Control"></a>
+    <div class="demo-text">
     <h3>DC Motor & Servo Control</h3>
     <ul>
-      <li><strong>DC motor:</strong> a switch sets direction and a potentiometer sets PWM speed, with motor power kept separate from control logic</li>
-      <li><strong>Positional servo:</strong> steps through left, center, and right positions</li>
-      <li><strong>Continuous-rotation servo:</strong> speed and direction set by the control signal</li>
-      <li><strong>Applied in <a href="/projects/goal-penalty-shootout/">GOAL!</a>:</strong> the goalkeeper servo and the continuous-servo rack-and-pinion run-up</li>
+      <li><strong>DC motor:</strong> switch sets direction, pot sets PWM speed; motor power isolated from logic</li>
+      <li><strong>Servos:</strong> positional (left/center/right) and continuous-rotation speed/direction control</li>
+      <li><strong>Applied in <a href="/projects/goal-penalty-shootout/">GOAL!</a>:</strong> goalkeeper servo and rack-and-pinion run-up</li>
     </ul>
+    </div>
   </div>
 </div>
 
-## Analog Circuits
+## Analog & Digital Circuits
 
-<div class="demo">
-  <div class="demo-media demo-pair">
-    <img src="/assets/img/projects/circuits/c-031.jpg" alt="Op-amp difference circuit on a breadboard">
-    <img src="/assets/img/projects/circuits/c-032.jpg" alt="TinkerCAD simulation of the difference circuit">
-  </div>
-  <div class="demo-text">
+<div class="demo-grid">
+  <div class="demo">
+    <a class="demo-media-link demo-media-link--diagram" href="/assets/img/projects/circuits/opamp-tinkercad.png"><img class="demo-media" src="/assets/img/projects/circuits/opamp-tinkercad.png" alt="TinkerCAD simulation of the op-amp difference amplifier: V1 = 8.99 V, V2 = 1.99 V, output 7.00 V"></a>
+    <div class="demo-text">
     <h3>Op-Amp Difference Amplifier</h3>
-    <p>A subtractor that outputs V<sub>out</sub> = V<sub>1</sub> − V<sub>2</sub> from two potentiometer inputs.</p>
+    <p>V<sub>out</sub> = V<sub>1</sub> − V<sub>2</sub> from two potentiometer inputs.</p>
     <ul>
-      <li><strong>Supply:</strong> dual ±9 V rails, so the output swings from about +9 V to −9 V</li>
-      <li><strong>Validated in simulation first:</strong> 4.00 V − 6.09 V → −2.09 V; 8.99 V − 1.99 V → 7.00 V</li>
-      <li><strong>Main challenge:</strong> building the negative supply rail on the breadboard</li>
+      <li><strong>Supply:</strong> dual ±9 V rails; output swings ~+9 V to −9 V</li>
+      <li><strong>Simulated in TinkerCAD:</strong> 8.99 V − 1.99 V → 7.00 V (shown); 4.00 V − 6.09 V → −2.09 V</li>
+      <li><strong>Main challenge:</strong> building the negative supply rail</li>
+      <li><a href="/assets/img/projects/circuits/c-031.jpg">See the breadboard build →</a></li>
     </ul>
+    </div>
   </div>
-</div>
 
-<div class="demo demo--video">
-  <video class="demo-media" src="/assets/video/circuits/rc-timer-led.mp4" poster="/assets/video/circuits/rc-timer-led.jpg" muted loop playsinline controls preload="metadata" data-autoplay></video>
-  <div class="demo-text">
+  <div class="demo">
+    <video class="demo-media" src="/assets/video/circuits/rc-timer-led.mp4" poster="/assets/video/circuits/rc-timer-led.jpg" muted loop playsinline controls preload="metadata" data-autoplay></video>
+    <div class="demo-text">
     <h3>LED Turn-On (RC Timer)</h3>
-    <p>A time-delayed LED built entirely from analog components.</p>
+    <p>A time-delayed LED built entirely from analog parts.</p>
     <ul>
-      <li><strong>How:</strong> a 10 µF RC network charges toward an op-amp comparator threshold; the comparator switches a transistor that drives the LED</li>
-      <li><strong>Timing:</strong> set by τ = RC, so the LED turns on ~10 s after the switch closes</li>
-      <li><strong>Key skill:</strong> using an op-amp as a threshold detector and tuning the reference voltage and resistor values</li>
+      <li><strong>How:</strong> 10 µF RC network charges to an op-amp comparator threshold, which switches a transistor</li>
+      <li><strong>Timing:</strong> τ = RC gives a ~10 s delay</li>
+      <li><strong>Key skill:</strong> op-amp as a threshold detector</li>
     </ul>
+    </div>
   </div>
-</div>
 
-<div class="demo demo--video">
-  <video class="demo-media" src="/assets/video/circuits/555-one-shot.mp4" poster="/assets/video/circuits/555-one-shot.jpg" muted loop playsinline controls preload="metadata" data-autoplay></video>
-  <div class="demo-text">
+  <div class="demo">
+    <video class="demo-media" src="/assets/video/circuits/555-one-shot.mp4" poster="/assets/video/circuits/555-one-shot.jpg" muted loop playsinline controls preload="metadata" data-autoplay></video>
+    <div class="demo-text">
     <h3>555 One-Shot Timer</h3>
-    <p>A button press triggers a 555 in monostable mode, which lights an LED through a transistor for a fixed time.</p>
+    <p>A button press triggers a 555 in monostable mode to light an LED.</p>
     <ul>
-      <li><strong>Timing:</strong> a 680 µF timing capacitor gives a repeatable ~9–10 s pulse (t ≈ 1.1·RC)</li>
-      <li><strong>Verified:</strong> the full trigger → threshold → discharge cycle</li>
+      <li><strong>Timing:</strong> 680 µF capacitor gives a repeatable ~9–10 s pulse (t ≈ 1.1·RC)</li>
+      <li><strong>Verified:</strong> full trigger → threshold → discharge cycle</li>
     </ul>
+    </div>
   </div>
-</div>
 
-## Digital Logic
-
-<div class="demo demo--video">
-  <video class="demo-media" src="/assets/video/circuits/full-adder.mp4" poster="/assets/video/circuits/full-adder.jpg" muted loop playsinline controls preload="metadata" data-autoplay></video>
-  <div class="demo-text">
+  <div class="demo">
+    <video class="demo-media" src="/assets/video/circuits/full-adder.mp4" poster="/assets/video/circuits/full-adder.jpg" muted loop playsinline controls preload="metadata" data-autoplay></video>
+    <div class="demo-text">
     <h3>Full Adder</h3>
-    <p>Three switches (A, B, C<sub>in</sub>) drive LEDs for SUM and CARRY, built from XOR, AND, and OR gates.</p>
+    <p>Switches A, B, C<sub>in</sub> drive SUM and CARRY LEDs through XOR, AND, and OR gates.</p>
     <ul>
       <li><strong>SUM</strong> = A ⊕ B ⊕ C<sub>in</sub></li>
       <li><strong>CARRY</strong> = A·B + A·C<sub>in</sub> + B·C<sub>in</sub></li>
       <li><strong>Verified:</strong> all 8 input combinations match the truth table</li>
     </ul>
+    </div>
   </div>
 </div>
 
