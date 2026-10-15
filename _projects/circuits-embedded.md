@@ -4,7 +4,7 @@ context: Independent practice · Sensors, actuators & circuits
 summary: Eight hands-on builds, from an ultrasonic rangefinder and PWM motor control to op-amp and 555 timing circuits, that built the embedded and electronics skills later used in GOAL! and IRIS.
 order: 6
 featured: false
-thumb: /assets/img/projects/circuits/c-036.jpg
+thumb: /assets/img/projects/circuits/thumb.jpg
 tags: [Arduino, C++, Sensor integration, PWM motor control, Servo control, Analog circuits]
 results:
   - "**Ultrasonic rangefinder** with live LCD readout, verified against a ruler at ~20 cm"
@@ -15,8 +15,8 @@ results:
 
 ## Sensing & Microcontroller I/O
 
-<div class="demo">
-  <video class="demo-media" src="/assets/video/circuits/ultrasonic-lcd.mp4" poster="/assets/video/circuits/ultrasonic-lcd.jpg" muted loop playsinline preload="metadata" data-autoplay></video>
+<div class="demo demo--video">
+  <video class="demo-media" src="/assets/video/circuits/ultrasonic-lcd.mp4" poster="/assets/video/circuits/ultrasonic-lcd.jpg" muted loop playsinline controls preload="metadata" data-autoplay></video>
   <div class="demo-text">
     <h3>Ultrasonic Rangefinder with LCD</h3>
     <p>An HC-SR04 sensor measures distance and displays it live on a 16-pin character LCD.</p>
@@ -28,8 +28,8 @@ results:
   </div>
 </div>
 
-<div class="demo">
-  <video class="demo-media" src="/assets/video/circuits/analog-io.mp4" poster="/assets/video/circuits/analog-io.jpg" muted loop playsinline preload="metadata" data-autoplay></video>
+<div class="demo demo--video">
+  <video class="demo-media" src="/assets/video/circuits/analog-io.mp4" poster="/assets/video/circuits/analog-io.jpg" muted loop playsinline controls preload="metadata" data-autoplay></video>
   <div class="demo-text">
     <h3>Analog I/O: Potentiometer-Dimmed LED</h3>
     <p>A potentiometer sets LED brightness through the microcontroller.</p>
@@ -40,8 +40,8 @@ results:
   </div>
 </div>
 
-<div class="demo">
-  <video class="demo-media" src="/assets/video/circuits/digital-io.mp4" poster="/assets/video/circuits/digital-io.jpg" muted loop playsinline preload="metadata" data-autoplay></video>
+<div class="demo demo--video">
+  <video class="demo-media" src="/assets/video/circuits/digital-io.mp4" poster="/assets/video/circuits/digital-io.jpg" muted loop playsinline controls preload="metadata" data-autoplay></video>
   <div class="demo-text">
     <h3>Digital I/O: Switch-Controlled LEDs</h3>
     <p>Two switches set the behavior of a pair of LEDs.</p>
@@ -86,8 +86,8 @@ results:
   </div>
 </div>
 
-<div class="demo">
-  <video class="demo-media" src="/assets/video/circuits/rc-timer-led.mp4" poster="/assets/video/circuits/rc-timer-led.jpg" muted loop playsinline preload="metadata" data-autoplay></video>
+<div class="demo demo--video">
+  <video class="demo-media" src="/assets/video/circuits/rc-timer-led.mp4" poster="/assets/video/circuits/rc-timer-led.jpg" muted loop playsinline controls preload="metadata" data-autoplay></video>
   <div class="demo-text">
     <h3>LED Turn-On (RC Timer)</h3>
     <p>A time-delayed LED built entirely from analog components.</p>
@@ -99,8 +99,8 @@ results:
   </div>
 </div>
 
-<div class="demo">
-  <video class="demo-media" src="/assets/video/circuits/555-one-shot.mp4" poster="/assets/video/circuits/555-one-shot.jpg" muted loop playsinline preload="metadata" data-autoplay></video>
+<div class="demo demo--video">
+  <video class="demo-media" src="/assets/video/circuits/555-one-shot.mp4" poster="/assets/video/circuits/555-one-shot.jpg" muted loop playsinline controls preload="metadata" data-autoplay></video>
   <div class="demo-text">
     <h3>555 One-Shot Timer</h3>
     <p>A button press triggers a 555 in monostable mode, which lights an LED through a transistor for a fixed time.</p>
@@ -113,8 +113,8 @@ results:
 
 ## Digital Logic
 
-<div class="demo">
-  <video class="demo-media" src="/assets/video/circuits/full-adder.mp4" poster="/assets/video/circuits/full-adder.jpg" muted loop playsinline preload="metadata" data-autoplay></video>
+<div class="demo demo--video">
+  <video class="demo-media" src="/assets/video/circuits/full-adder.mp4" poster="/assets/video/circuits/full-adder.jpg" muted loop playsinline controls preload="metadata" data-autoplay></video>
   <div class="demo-text">
     <h3>Full Adder</h3>
     <p>Three switches (A, B, C<sub>in</sub>) drive LEDs for SUM and CARRY, built from XOR, AND, and OR gates.</p>
