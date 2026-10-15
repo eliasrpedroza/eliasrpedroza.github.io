@@ -120,7 +120,8 @@ h1, h2, h3 { line-height: 1.2; letter-spacing: -0.015em; }
 .lead { font-size: 19px; color: var(--ink-2); margin: 0 0 28px; }
 
 .hero { margin: 0 0 28px; }
-.hero img, .hero video { width: 100%; border-radius: var(--radius); background: #000; }
+.hero img { width: 100%; border-radius: var(--radius); }
+.hero video { width: auto; max-width: 100%; max-height: 72vh; margin: 0 auto; border-radius: var(--radius); background: #000; }
 .hero--portrait { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; }
 .hero--portrait video { max-height: 72vh; width: auto; margin: 0 auto; }
 figcaption { font-size: 13.5px; color: var(--muted); margin-top: 8px; text-align: center; }
@@ -252,4 +253,20 @@ figcaption { font-size: 13.5px; color: var(--muted); margin-top: 8px; text-align
 @media (max-width: 640px) {
   .photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .timeline-body.has-image { grid-template-columns: 1fr; }
+}
+
+/* ───────────────── Demo blocks (media + notes side by side) ───────────────── */
+.demo { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 22px; align-items: start; margin: 18px 0; padding: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.demo-media { width: 100%; border-radius: 8px; display: block; }
+video.demo-media { max-height: 360px; object-fit: contain; background: #000; cursor: pointer; }
+img.demo-media, .demo-pair img { aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--line); }
+.demo-pair { display: grid; gap: 8px; }
+.demo-pair img { width: 100%; border-radius: 8px; }
+.demo-text h3 { margin: 0 0 6px; font-size: 18px; }
+.demo-text p { margin: 0 0 8px; }
+.demo-text ul { margin: 0; padding-left: 18px; }
+.demo-text li { margin: 3px 0; font-size: 15px; }
+@media (max-width: 720px) {
+  .demo { grid-template-columns: 1fr; gap: 14px; padding: 12px; }
+  video.demo-media { max-height: 60vh; }
 }

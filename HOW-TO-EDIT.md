@@ -113,6 +113,21 @@ gallery:
   - src: /assets/img/projects/iris/b.jpg
 ```
 
+**Video (or photo) with notes beside it**, like the circuits page:
+```html
+<div class="demo">
+  <video class="demo-media" src="/assets/video/my-project/clip.mp4" muted loop playsinline preload="metadata" data-autoplay></video>
+  <div class="demo-text">
+    <h3>Clip title</h3>
+    <p>One sentence on what it shows.</p>
+    <ul>
+      <li><strong>How:</strong> …</li>
+    </ul>
+  </div>
+</div>
+```
+Clips with `data-autoplay` play silently only while on screen; tapping pauses them. For a photo instead, swap the `<video …>` line for `<img class="demo-media" src="…" alt="…">`.
+
 ### Swap a picture
 Upload the new file **with the same name** to replace the old one. Nothing else needs to change.
 

@@ -20,5 +20,26 @@
     {{ content }}
   </main>
   {% include footer.html %}
+  <script>
+  // Clips marked data-autoplay play only while on screen; tap to pause/resume.
+  (function () {
+    var vids = document.querySelectorAll('video[data-autoplay]');
+    if (!vids.length) return;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    vids.forEach(function (v) {
+      v.addEventListener('click', function () { v.paused ? v.play() : v.pause(); v.dataset.userPaused = v.paused ? '1' : ''; });
+      if (reduce) v.setAttribute('controls', '');
+    });
+    if (reduce || !('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        var v = e.target;
+        if (e.isIntersecting && !v.dataset.userPaused) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+        else if (!e.isIntersecting) v.pause();
+      });
+    }, { threshold: 0.4 });
+    vids.forEach(function (v) { io.observe(v); });
+  })();
+  </script>
 </body>
 </html>
