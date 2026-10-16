@@ -87,7 +87,18 @@ h1, h2, h3 { line-height: 1.2; letter-spacing: -0.015em; }
   border-radius: var(--radius); overflow: hidden; color: inherit; text-decoration: none;
   transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
-.card:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: transparent; }
+.card:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--accent-fill); }
+/* Hover cues: photo zooms slightly, title turns green, "View project →" slides in */
+.card-media img { transition: transform .35s ease; }
+.card:hover .card-media img { transform: scale(1.045); }
+.card-title { transition: color .18s ease; }
+.card:hover .card-title { color: var(--accent); }
+.card-cta { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; font: 500 13px/1 var(--sans); color: var(--accent); opacity: 0; transform: translateX(-6px); transition: opacity .2s ease, transform .2s ease; }
+.card-arrow { display: inline-block; transition: transform .2s ease; }
+.card:hover .card-cta, .card:focus-visible .card-cta { opacity: 1; transform: none; }
+.card:hover .card-arrow { transform: translateX(3px); }
+.card:focus-visible { outline: 2px solid var(--accent-fill); outline-offset: 3px; }
+@media (hover: none) { .card-cta { opacity: 1; transform: none; } }
 .card-media { aspect-ratio: 16 / 10; background: var(--line); overflow: hidden; }
 .card-media img { width: 100%; height: 100%; object-fit: cover; }
 .card-body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
@@ -220,8 +231,11 @@ figcaption { font-size: 13.5px; color: var(--muted); margin-top: 8px; text-align
   .grid { grid-template-columns: 1fr; gap: 16px; }
   .lead { font-size: 17px; }
   .facts { grid-template-columns: 1fr; }
-  .about-top { grid-template-columns: 1fr; gap: 20px; }
-  .about-photo { max-width: 200px; }
+  /* phones: small round photo beside the greeting, like the home page */
+  .about-top { display: block; margin-top: 24px; }
+  .about-top::after { content: ""; display: block; clear: both; }
+  .about-photo { float: left; width: 76px; height: 76px; border-radius: 50%; object-fit: cover; margin: 0 14px 8px 0; }
+  .about-top h1 { font-size: 28px; line-height: 76px; margin: 0 0 8px; }
   .timeline li, .skills { grid-template-columns: 1fr; gap: 4px; }
   .skills dt { margin-top: 8px; }
   .hero--portrait { padding: 8px; }

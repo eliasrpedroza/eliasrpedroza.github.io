@@ -5,7 +5,7 @@ summary: A buoy–winch system that waits safely below the surface, rises on a s
 order: 1
 featured: true
 wide: true
-thumb: /assets/img/projects/iris/buoy-winch-dock.jpg
+thumb: /assets/img/projects/iris/card.jpg
 hero_video: /assets/video/iris-swaying.mp4
 hero_poster: /assets/video/iris-swaying.jpg
 hero_portrait: true

@@ -6,12 +6,15 @@ permalink: /about/
 {% assign a = site.data.about %}
 <div class="wrap wrap--media" style="padding-top:28px">
   <figure class="banner">
-    <img src="{{ '/assets/img/campus-pixel.webp' | relative_url }}" alt="Pixel-art path from a Santa Clara–style mission campus to a lakeside Gothic campus">
-    <figcaption>Santa Clara → Evanston</figcaption>
+    <img src="{{ '/assets/img/campus-pixel.webp' | relative_url }}" alt="Pixel art of me walking from a Santa Clara–style mission campus to a lakeside Gothic campus">
+    <figcaption>SCU → NU</figcaption>
   </figure>
 
   <section class="about-top">
-    <img class="about-photo" src="{{ '/assets/img/headshot.jpg' | relative_url }}" alt="Elias Pedroza at Santa Clara University">
+    <picture>
+      <source media="(max-width: 640px)" srcset="{{ '/assets/img/headshot-square.jpg' | relative_url }}">
+      <img class="about-photo" src="{{ '/assets/img/headshot.jpg' | relative_url }}" alt="Elias Pedroza at Santa Clara University">
+    </picture>
     <div>
       <h1>Hi, I'm Elias.</h1>
       <!-- ✏️ Intro text: edit these two paragraphs directly -->

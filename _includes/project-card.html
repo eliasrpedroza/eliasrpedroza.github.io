@@ -7,5 +7,6 @@
     <h3 class="card-title">{{ p.title }}</h3>
     <p class="card-summary">{{ p.summary }}</p>
     {% if p.tags %}<ul class="tags">{% for t in p.tags limit: 4 %}<li>{{ t }}</li>{% endfor %}</ul>{% endif %}
+    <span class="card-cta" aria-hidden="true">View project <span class="card-arrow">→</span></span>
   </div>
 </a>
