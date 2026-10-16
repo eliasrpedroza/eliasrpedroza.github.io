@@ -5,6 +5,7 @@ summary: Eight hands-on builds, from an ultrasonic rangefinder and PWM motor con
 order: 6
 featured: false
 thumb: /assets/img/projects/circuits/thumb.jpg
+preview: /assets/video/previews/circuits.mp4   # plays on the home-page card while hovered
 tags: [Arduino, C++, Sensor integration, PWM motor control, Servo control, Analog circuits]
 results:
   - "**Ultrasonic rangefinder** with live LCD readout, verified against a ruler at ~20 cm"

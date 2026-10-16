@@ -6,6 +6,7 @@ order: 1
 featured: true
 wide: true
 thumb: /assets/img/projects/iris/card.jpg
+preview: /assets/video/previews/iris.mp4   # plays on the home-page card while hovered
 hero_video: /assets/video/iris-swaying.mp4
 hero_poster: /assets/video/iris-swaying.jpg
 hero_portrait: true

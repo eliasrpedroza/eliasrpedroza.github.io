@@ -3,27 +3,27 @@ title: Swirl Pot Selection
 context: Bronco Racing · Formula SAE Electric
 summary: CFD-based selection of a swirl pot for coolant deaeration in an electric FSAE car's cooling loop.
 order: 7
-featured: false
-thumb: /assets/img/projects/swirl/cfd.png
-hero_image: /assets/img/projects/swirl/cfd.png
+thumb: /assets/img/projects/swirl/thumb.jpg
+hero_side: true
+hero_slides_ratio: 1 / 1
+hero_slides:
+  - src: /assets/img/projects/swirl/perpendicular.jpg
+    label: Perpendicular ports
+    alt: Swirl pot with inlet and outlet both perpendicular to the body
+  - src: /assets/img/projects/swirl/cfd-perpendicular.jpg
+    label: Perpendicular · CFD
+    alt: Ansys Fluent velocity contour of the perpendicular swirl pot
+  - src: /assets/img/projects/swirl/parallel.jpg
+    label: Parallel ports
+    alt: Swirl pot with one port along the body axis
+  - src: /assets/img/projects/swirl/cfd-parallel.jpg
+    label: Parallel · CFD
+    alt: Ansys Fluent velocity contour of the parallel swirl pot
+hero_caption: The two geometries compared, each with its velocity contour from Ansys Fluent.
 tags: [Ansys Fluent, CFD, Make vs. buy]
 results:
-  - "**Perpendicular inlet/outlet** gave the strongest, most stable vortex and the most uniform outlet velocity"
-  - "**Recommended buying a commercial unit** after a make-vs-buy analysis"
+  - "**Learned Ansys Fluent on my own**, before any formal fluids coursework"
+  - "**Compared parallel vs. perpendicular ports** on vortex formation, outlet velocity, and pressure loss"
+  - "**Perpendicular won:** a stronger, steadier vortex and more uniform outlet flow for better air separation, at an acceptable pressure loss"
+  - "**Recommended buying, not building:** similar cost, less fabrication risk, and no welding or pressure testing"
 ---
-
-## Problem
-
-Air trapped in an EV cooling loop reduces heat transfer and pump performance. A swirl pot separates the air by spinning the coolant into a vortex.
-
-## Analysis
-
-- Learned **Ansys Fluent** independently, before taking formal fluids coursework
-- Simulated **parallel vs. perpendicular** inlet/outlet geometries
-- Compared vortex formation, outlet-velocity consistency, and pressure loss
-
-## Recommendation
-
-The perpendicular geometry deaerated best, with a pressure loss that was acceptable. A make-vs-buy comparison found a commercial swirl pot cost about the same as a custom one. Buying also avoided fabrication risk, welding, and pressure testing, so the recommendation was to buy.
-
-<figure><img src="/assets/img/projects/swirl/swirl-pot.jpg" alt="Commercial swirl pot" style="max-width:360px"></figure>

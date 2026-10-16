@@ -25,6 +25,25 @@
   </main>
   {% include footer.html %}
   <script>
+  // Card video previews: play the project's clip while the card is hovered (mouse only)
+  (function () {
+    if (!window.matchMedia || !matchMedia('(hover: hover)').matches) return;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    document.querySelectorAll('.card').forEach(function (card) {
+      var v = card.querySelector('.card-preview');
+      if (!v) return;
+      card.addEventListener('mouseenter', function () {
+        if (!v.src) v.src = v.dataset.src;
+        v.currentTime = 0;
+        var p = v.play();
+        if (p && p.then) p.then(function () { card.classList.add('is-previewing'); }).catch(function () {});
+        else card.classList.add('is-previewing');
+      });
+      card.addEventListener('mouseleave', function () { card.classList.remove('is-previewing'); v.pause(); });
+    });
+  })();
+  </script>
+  <script>
   // Light/dark toggle in the header
   (function () {
     var btn = document.querySelector('.theme-toggle');

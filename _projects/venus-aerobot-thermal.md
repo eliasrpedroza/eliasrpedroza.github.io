@@ -5,7 +5,7 @@ summary: Thermal control subsystem for Venera Nova, a Venus aerobot mission conc
 order: 5
 featured: true
 wide: true
-thumb: /assets/img/projects/nasa/hot-case.png
+thumb: /assets/img/projects/nasa/card.png
 role: Thermal Engineer, owning the thermal control subsystem (TCS)
 timeline: Jan – May 2025
 team: ["Isabela Benavidez", "Rachel Brown", "Victor Chen", "Alaina Claudio", "Andrew Hoang", "Gregory Jabido", "Valerie Miranda", "Isaac Munoz", "Patrick Nguyen", "Tyree Nguyen", "Manahil Syeda"]

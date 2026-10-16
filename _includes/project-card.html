@@ -1,6 +1,7 @@
 <a class="card" href="{{ p.url | relative_url }}">
   <div class="card-media">
     <img src="{{ p.thumb | relative_url }}" alt="{{ p.title }}" loading="lazy">
+    {% if p.preview %}<video class="card-preview" data-src="{{ p.preview | relative_url }}" muted loop playsinline preload="none" aria-hidden="true"></video>{% endif %}
   </div>
   <div class="card-body">
     <p class="card-context">{{ p.context }}</p>

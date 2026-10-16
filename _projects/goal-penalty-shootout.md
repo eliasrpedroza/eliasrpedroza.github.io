@@ -6,6 +6,7 @@ order: 4
 featured: true
 wide: true
 thumb: /assets/img/projects/goal/final.jpg
+preview: /assets/video/previews/goal.mp4   # plays on the home-page card while hovered
 hero_video: /assets/video/goal/gameplay.mp4
 hero_poster: /assets/video/goal/gameplay.jpg
 hero_max_width: 680px   # keeps the landscape video from taking over the screen

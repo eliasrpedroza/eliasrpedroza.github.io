@@ -22,16 +22,6 @@ tags: [SOLIDWORKS, FEA, Motion study, Torque analysis]
 results:
   - "**Retracting gear in CAD:** actuator-driven leg with a shock strut, plus a servo-driven hatch"
   - "**Drives sized:** 0.42 N·m to raise the leg in 2 s, 0.06 N·m for the hatch"
-  - "**FEA:** fork peaked at 530 MPa vs. a 245 MPa yield, so it needs a stronger material"
+  - "**FEA of the shaft, fork, and pivot** under static and landing loads pointed to the fork and pivot as the parts to strengthen"
   - "**$177 bill of materials:** printed PETG/TPU, aluminum, and steel"
 ---
-
-## FEA
-
-Peak von Mises stress (MPa) in the three load-bearing parts, modeled in 2017A aluminum (yield **245 MPa**). Values above yield are in bold.
-
-| Part | Static load | Landing: 30 mph, 10 ft | Landing: 20 mph, 6 ft |
-|---|---|---|---|
-| Main gear shaft | 229 | **306** | **246** |
-| Fork | **530** | **248** | 201 |
-| Pivot | **434** | 189 | 98.8 |
