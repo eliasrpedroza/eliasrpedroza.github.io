@@ -157,28 +157,16 @@ figcaption { font-size: 13.5px; color: var(--muted); margin-top: 8px; text-align
 .callout p { margin: 0; color: var(--ink); }
 .repo-link { margin-top: 32px; font-weight: 500; }
 
-/* Chart (IRIS ballast sweep) */
-.chart { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 16px 8px; margin: 24px 0; position: relative; }
-.chart h4 { margin: 0 0 2px; font-size: 15px; }
-.chart .sub { margin: 0 0 8px; font-size: 13px; color: var(--muted); }
-.chart svg { width: 100%; height: auto; display: block; overflow: visible; }
-.chart .grid-line { stroke: var(--line); stroke-width: 1; }
-.chart .axis-text { fill: var(--muted); font: 11px var(--mono); }
-.chart .axis-title { fill: var(--muted); font: 12px var(--sans); }
-.chart .series { stroke: var(--accent-fill); stroke-width: 2; fill: none; }
-.chart .dot { fill: var(--accent-fill); stroke: var(--surface); stroke-width: 2; }
-.chart .dot--current { fill: var(--surface); stroke: var(--accent-fill); stroke-width: 2.5; }
-.chart .zero { stroke: var(--ink-2); stroke-width: 1; }
-.chart .threshold { stroke: var(--ink-2); stroke-width: 1; stroke-dasharray: 4 4; }
-.chart .label { fill: var(--ink); font: 500 12px var(--sans); }
-.chart .label-muted { fill: var(--muted); font: 12px var(--sans); }
-.chart .hit { fill: transparent; cursor: crosshair; }
-.chart .tip {
-  position: absolute; pointer-events: none; background: var(--ink); color: var(--bg);
-  font: 12px/1.4 var(--mono); padding: 6px 8px; border-radius: 6px; opacity: 0; transition: opacity .1s; white-space: nowrap;
+/* Hero video beside the Results box (hero_side: true) */
+.hero-side { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 24px; align-items: center; margin: 0 0 36px; }
+.hero-side .hero { margin: 0; }
+.hero-side .hero video { width: 100%; max-height: none; }
+.hero-side .hero figcaption { font-size: 13px; }
+.hero-side .results { margin: 0; }
+@media (max-width: 760px) {
+  .hero-side { grid-template-columns: 1fr; }
+  .hero-side .hero { max-width: 380px; margin: 0 auto; width: 100%; }
 }
-.chart details { font-size: 13px; color: var(--muted); margin-top: 6px; }
-.chart details table { font-size: 13px; }
 
 /* ───────────────── About ───────────────── */
 .banner { margin: 0 0 8px; }

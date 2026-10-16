@@ -10,7 +10,9 @@ layout: default
   </div>
 
   <div class="wrap wrap--media">
-    {% if page.hero_video %}
+    {% if page.hero_video and page.hero_side %}
+    {% comment %} hero_side: video sits beside the Results box below {% endcomment %}
+    {% elsif page.hero_video %}
     <figure class="hero{% if page.hero_portrait %} hero--portrait{% endif %}">
       <video src="{{ page.hero_video | relative_url }}" poster="{{ page.hero_poster | relative_url }}" autoplay muted loop playsinline controls></video>
       {% if page.hero_caption %}<figcaption>{{ page.hero_caption }}</figcaption>{% endif %}
@@ -24,6 +26,21 @@ layout: default
   </div>
 
   <div class="wrap wrap--text">
+    {% if page.hero_video and page.hero_side %}
+    <div class="hero-side">
+      <figure class="hero hero--portrait">
+        <video src="{{ page.hero_video | relative_url }}" poster="{{ page.hero_poster | relative_url }}" autoplay muted loop playsinline controls></video>
+        {% if page.hero_caption %}<figcaption>{{ page.hero_caption }}</figcaption>{% endif %}
+      </figure>
+      {% if page.results %}
+      <section class="results">
+        <h2>Results</h2>
+        <ul>{% for r in page.results %}<li>{{ r | markdownify | remove: '<p>' | remove: '</p>' }}</li>{% endfor %}</ul>
+      </section>
+      {% endif %}
+    </div>
+    {% endif %}
+
     <dl class="facts">
       {% if page.role %}<div><dt>Role</dt><dd>{{ page.role }}</dd></div>{% endif %}
       {% if page.timeline %}<div><dt>Timeline</dt><dd>{{ page.timeline }}</dd></div>{% endif %}
@@ -37,7 +54,8 @@ layout: default
     </div>
     {% endif %}
 
-    {% if page.results %}
+    {% assign side_layout = false %}{% if page.hero_video and page.hero_side %}{% assign side_layout = true %}{% endif %}
+    {% if page.results and side_layout == false %}
     <section class="results">
       <h2>Results</h2>
       <ul>{% for r in page.results %}<li>{{ r | markdownify | remove: '<p>' | remove: '</p>' }}</li>{% endfor %}</ul>

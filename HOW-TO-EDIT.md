@@ -145,6 +145,7 @@ Upload the new file **with the same name** to replace the old one. Nothing else 
 
 ### Change a project's card image or top image
 Edit `thumb:` (the card on the home page) and `hero_image:` or `hero_video:` (the top of the project page).
+Add `hero_side: true` to show a smaller hero video beside the Results box (used on IRIS); remove it to put the video back on top at full size.
 
 ### About page photos
 Add entries under `photos:` in `_data/about.yml`. You can also add a picture beside an experience entry by un-commenting its `image:` line.

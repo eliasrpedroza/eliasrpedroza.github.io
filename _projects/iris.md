@@ -9,6 +9,7 @@ thumb: /assets/img/projects/iris/buoy-winch-dock.jpg
 hero_video: /assets/video/iris-swaying.mp4
 hero_poster: /assets/video/iris-swaying.jpg
 hero_portrait: true
+hero_side: true   # smaller video, placed beside the Results box
 hero_caption: Bay deployment in Foster City. The buoy rides the wind chop and stays upright, with its dome and cellular antenna above the surface.
 role: "Buoy structure and surface stability: enclosure selection, structural design and materials, hydrostatic analysis, and water testing"
 timeline: Jun 2025 – Jun 2026 (senior thesis)
@@ -63,7 +64,7 @@ The Robotic Systems Lab's REEF sensor network logs data on the Palos Verdes Reef
     <ul>
       <li><strong>Frame:</strong> anodized aluminum T-slot rails as the structural spine</li>
       <li><strong>Clamps:</strong> 6061-T6 anodized, rubber-lined, with 316 stainless hardware</li>
-      <li><strong>Mounts:</strong> SLS nylon (complex geometry, no marine treatment needed), one carrying the tether hardware</li>
+      <li><strong>Custom mounts (my design):</strong> SLS nylon brackets that lock the tube clamps to the T-slot frame; one has a lug where the tether shackles attach. SLS handled the complex shape and needs no marine coating</li>
       <li><strong>Tether:</strong> two 316 stainless screw-pin shackles rated to 700 lb</li>
     </ul>
     </div>
@@ -97,9 +98,7 @@ The buoy has to float upright so the antenna stays above water. I checked this w
 | Metacentric radius, BM | 2.9 mm |
 | **Metacentric height, GM** | **31.5 mm (stable)** |
 
-About **91% of the righting ability comes from the low ballast** (KB − KG = 28.5 mm); the slender tube's waterplane adds only 2.9 mm. The ballast bolts to the T-slot nuts, so its height can be tuned during integration. A sweep checked how far it can move before the buoy becomes unstable:
-
-{% include iris-gm-chart.html %}
+About **91% of the righting ability comes from the low ballast** (KB − KG = 28.5 mm); the slender tube's waterplane adds only 2.9 mm. The ballast is **modular**: two 316 stainless weights bolt to the T-slot nuts, so they can be moved or swapped during integration to tune stability without redesigning any parts.
 
 ## Testing
 
