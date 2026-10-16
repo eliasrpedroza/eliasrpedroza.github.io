@@ -14,7 +14,7 @@ hero_caption: Bay deployment in Foster City. The buoy rides the wind chop and st
 role: "Buoy structure and surface stability: enclosure selection, structural design and materials, hydrostatic analysis, and water testing"
 timeline: Jun 2025 – Jun 2026 (senior thesis)
 team: ["Thatcher Steele-Maley", "Cooper McCarthy", "Zach Henderson", "Colin Friedel"]
-tags: [SOLIDWORKS, Hydrostatic analysis, Marine materials, Pressure vessels, SLS printing, Water testing]
+tags: [SOLIDWORKS, Python, Hydrostatic analysis, Marine materials, SLS printing, Water testing]
 docs:
   - label: "Read the senior thesis (152 pp)"
     url: /assets/docs/iris-thesis.pdf
@@ -80,7 +80,7 @@ Every material was chosen to survive a 6-month seawater deployment: anodized alu
 
 ### Stability Analysis
 
-The buoy has to float upright so the antenna stays above water. I checked this with a hydrostatic model built from a component-by-component inventory of mass and displaced volume.
+The buoy has to float upright so the antenna stays above water. I checked this with a hydrostatic model, scripted in Python, built from a component-by-component inventory of mass and displaced volume.
 
 <figure>
   <img src="/assets/img/projects/iris/stability-diagram.png" alt="Buoy stability diagram showing keel, center of gravity, center of buoyancy, and metacenter">
