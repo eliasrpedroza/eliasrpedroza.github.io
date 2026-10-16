@@ -11,10 +11,10 @@ layout: default
 </section>
 
 <section id="projects" class="wrap">
+  <p class="now-note"><span class="now-label">Now</span> M.S. in Robotics at Northwestern, taking Robotic Manipulation, Embedded Systems in Robotics (ROS 2), Machine Learning, and Machine Dynamics.</p>
+
   {% assign all = site.projects | sort: "order" %}
   <div class="grid">
     {% for p in all %}{% include project-card.html %}{% endfor %}
   </div>
-
-  <p class="now-note"><span class="now-label">Now</span> M.S. in Robotics at Northwestern, taking robotic manipulation, robot dynamics, and embedded systems in robotics. Work in progress lives on <a href="https://github.com/{{ site.github }}">GitHub →</a></p>
 </section>

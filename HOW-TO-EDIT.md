@@ -160,7 +160,7 @@ Upload the new file **with the same name** to replace the old one. Nothing else 
 
 ### Change a project's card image or top image
 Edit `thumb:` (the card on the home page) and `hero_image:` or `hero_video:` (the top of the project page).
-Add `hero_max_width: 680px` to shrink a landscape top video (used on GOAL!). Add `hero_side: true` to show a smaller hero video beside the Results box (used on IRIS); remove it to put the video back on top at full size.
+Add `hero_max_width: 680px` to shrink a landscape top video (used on GOAL!). With `hero_side: true` you can also add a `side_photos:` list (each item has `src:` and `alt:`) to show a row of small portrait photos under the Results box, like the Wig Wag page. Add `hero_side: true` to show a smaller hero video beside the Results box (used on IRIS); remove it to put the video back on top at full size.
 
 ### About page photos
 Add entries under `photos:` in `_data/about.yml`. You can also add a picture beside an experience entry by un-commenting its `image:` line.
@@ -173,7 +173,7 @@ Add entries under `photos:` in `_data/about.yml`. You can also add a picture bes
 ---
 
 ### The "Now" line on the home page
-Edit the sentence inside `<p class="now-note">` in `index.html`, e.g. to name a project you're building. Delete the whole line to remove it.
+Edit the sentence inside `<p class="now-note">` in `index.html` (it sits above the project cards), e.g. to name a project you're building. Delete the whole line to remove it.
 
 ## Adding a new project
 1. Create a folder for its media: `assets/img/projects/<name>/`, and upload the photos there.

@@ -96,8 +96,8 @@ h1, h2, h3 { line-height: 1.2; letter-spacing: -0.015em; }
 .card-summary { margin: 0; color: var(--ink-2); font-size: 14.5px; line-height: 1.5; }
 .card .tags { margin-top: auto; padding-top: 6px; }
 
-/* "Now" line under the project grid */
-.now-note { margin: 28px 0 0; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 15px; }
+/* "Now" line above the project grid */
+.now-note { margin: 0 0 22px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--ink-2); font-size: 15px; }
 .now-note a { color: var(--accent); text-decoration: none; font-weight: 500; }
 .now-note a:hover { text-decoration: underline; }
 .now-label { font: 500 11.5px/1 var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--accent); background: var(--accent-soft); padding: 5px 8px; border-radius: 999px; margin-right: 8px; vertical-align: 1px; }
@@ -161,6 +161,9 @@ figcaption { font-size: 13.5px; color: var(--muted); margin-top: 8px; text-align
 .hero-side .hero video { width: 100%; max-height: none; }
 .hero-side .hero figcaption { font-size: 13px; }
 .hero-side .results { margin: 0; }
+.side-photos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 14px; }
+.side-photos img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 8px; border: 1px solid var(--line); }
+.side-photos a:hover img { opacity: .9; }
 @media (max-width: 760px) {
   .hero-side { grid-template-columns: 1fr; }
   .hero-side .hero { max-width: 380px; margin: 0 auto; width: 100%; }

@@ -32,12 +32,19 @@ layout: default
         <video src="{{ page.hero_video | relative_url }}" poster="{{ page.hero_poster | relative_url }}" autoplay muted loop playsinline controls></video>
         {% if page.hero_caption %}<figcaption>{{ page.hero_caption }}</figcaption>{% endif %}
       </figure>
+      <div class="hero-side-info">
       {% if page.results %}
       <section class="results">
         <h2>Results</h2>
         <ul>{% for r in page.results %}<li>{{ r | markdownify | remove: '<p>' | remove: '</p>' }}</li>{% endfor %}</ul>
       </section>
       {% endif %}
+      {% if page.side_photos %}
+      <div class="side-photos">
+        {% for ph in page.side_photos %}<a href="{{ ph.src | relative_url }}"><img src="{{ ph.src | relative_url }}" alt="{{ ph.alt | default: page.title }}" title="{{ ph.alt }}"></a>{% endfor %}
+      </div>
+      {% endif %}
+      </div>
     </div>
     {% endif %}
 
