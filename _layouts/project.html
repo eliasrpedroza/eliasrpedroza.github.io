@@ -31,6 +31,12 @@ layout: default
       {% if page.tags %}<div><dt>Tools</dt><dd><ul class="tags">{% for t in page.tags %}<li>{{ t }}</li>{% endfor %}</ul></dd></div>{% endif %}
     </dl>
 
+    {% if page.docs %}
+    <div class="doc-links">
+      {% for d in page.docs %}<a class="btn" href="{{ d.url | relative_url }}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9zM14 3v6h6M8 13h8M8 17h5"/></svg>{{ d.label }}</a>{% endfor %}
+    </div>
+    {% endif %}
+
     {% if page.results %}
     <section class="results">
       <h2>Results</h2>
