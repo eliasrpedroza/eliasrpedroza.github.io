@@ -98,6 +98,17 @@ h1, h2, h3 { line-height: 1.2; letter-spacing: -0.015em; }
 .card:hover .card-cta, .card:focus-visible .card-cta { opacity: 1; transform: none; }
 .card:hover .card-arrow { transform: translateX(3px); }
 .card:focus-visible { outline: 2px solid var(--accent-fill); outline-offset: 3px; }
+/* Pixel me walks across the photo on hover (sprite from the About banner) */
+.card-media { position: relative; }
+.card-media::after {
+  content: ""; position: absolute; left: -48px; bottom: 6px; width: 38px; height: 62px;
+  background: url("../img/walker.png") no-repeat center / contain;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, .45)); opacity: 0; pointer-events: none;
+}
+.card:hover .card-media::after { opacity: 1; animation: walk-in 1.1s cubic-bezier(.3, .6, .4, 1) forwards, walk-bob .18s steps(2) 6; }
+@keyframes walk-in { from { left: -48px; } to { left: calc(100% - 52px); } }
+@keyframes walk-bob { 0% { margin-bottom: 0; } 100% { margin-bottom: 2px; } }
+@media (prefers-reduced-motion: reduce) { .card:hover .card-media::after { animation: none; left: calc(100% - 52px); } }
 @media (hover: none) { .card-cta { opacity: 1; transform: none; } }
 .card-media { aspect-ratio: 16 / 10; background: var(--line); overflow: hidden; }
 .card-media img { width: 100%; height: 100%; object-fit: cover; }

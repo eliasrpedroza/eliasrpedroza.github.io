@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% assign side_layout = false %}{% if page.hero_side %}{% if page.hero_video or page.hero_slides %}{% assign side_layout = true %}{% endif %}{% endif %}
 <article class="project{% if page.wide %} project--wide{% endif %}">
   <div class="wrap wrap--text">
     <a class="back" href="{{ '/' | relative_url }}#projects">← All projects</a>
@@ -10,8 +11,8 @@ layout: default
   </div>
 
   <div class="wrap wrap--media">
-    {% if page.hero_video and page.hero_side %}
-    {% comment %} hero_side: video sits beside the Results box below {% endcomment %}
+    {% if side_layout %}
+    {% comment %} hero_side: video or slideshow sits beside the Results box below {% endcomment %}
     {% elsif page.hero_video %}
     <figure class="hero{% if page.hero_portrait %} hero--portrait{% endif %}"{% if page.hero_max_width %} style="max-width: {{ page.hero_max_width }}; margin-left: auto; margin-right: auto"{% endif %}>
       <video src="{{ page.hero_video | relative_url }}" poster="{{ page.hero_poster | relative_url }}" autoplay muted loop playsinline controls></video>
@@ -26,10 +27,16 @@ layout: default
   </div>
 
   <div class="wrap wrap--text">
-    {% if page.hero_video and page.hero_side %}
+    {% if side_layout %}
     <div class="hero-side">
       <figure class="hero hero--portrait">
+        {% if page.hero_slides %}
+        <div class="demo-media slideshow" style="aspect-ratio: {{ page.hero_slides_ratio | default: '1 / 1' }}" data-interval="{{ page.hero_slides_interval | default: 3000 }}">
+          {% for sl in page.hero_slides %}<a class="slide slide--contain{% if forloop.first %} is-active{% endif %}" href="{{ sl.src | relative_url }}" data-label="{{ sl.label }}"><img src="{{ sl.src | relative_url }}" alt="{{ sl.alt | default: sl.label }}"></a>{% endfor %}
+        </div>
+        {% else %}
         <video src="{{ page.hero_video | relative_url }}" poster="{{ page.hero_poster | relative_url }}" autoplay muted loop playsinline controls></video>
+        {% endif %}
         {% if page.hero_caption %}<figcaption>{{ page.hero_caption }}</figcaption>{% endif %}
       </figure>
       <div class="hero-side-info">
@@ -61,7 +68,6 @@ layout: default
     </div>
     {% endif %}
 
-    {% assign side_layout = false %}{% if page.hero_video and page.hero_side %}{% assign side_layout = true %}{% endif %}
     {% if page.results and side_layout == false %}
     <section class="results">
       <h2>Results</h2>
