@@ -22,7 +22,7 @@ experience:
     org: Design for Assistive Robotic Technologies (DART) Lab
     location: Santa Clara University
     when: 2025 – 2026
-    text: Laminar-jamming fingers for a variable-stiffness prosthetic hand.
+    text: Designed the laminar-jamming fingers and whiffletree for a low-cost prosthetic hand; co-author on the resulting paper, accepted to IEEE-RAS Humanoids 2026.
     project: /projects/prosthetic-fingers/
 
   - title: Thermal Engineer
@@ -66,3 +66,12 @@ photos:
     caption: IRIS buoy and winch before a water test
   - src: /assets/img/projects/wigwag/mill.jpg
     caption: Machining the wig wag motor
+
+# Papers and talks, newest first
+publications:
+  - authors: "S. Jacqmotte-Parks, N. M. Katigbak, <strong>E. Pedroza</strong>, P. Ayoubi, and M. E. Abbott"
+    title: "Design and Characterization of a Jamming-Based Low-Cost Prosthetic Hand"
+    venue: "2026 IEEE-RAS 25th International Conference on Humanoid Robots (Humanoids 2026), Santa Clara, CA"
+    status: Accepted
+    project: /projects/prosthetic-fingers/
+    # url: https://ieeexplore.ieee.org/...   # add once it is published

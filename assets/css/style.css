@@ -217,6 +217,9 @@ figcaption { font-size: 13.5px; color: var(--muted); margin-top: 8px; text-align
 .skills dt { font: 13px/1.7 var(--mono); color: var(--muted); }
 .skills dd { margin: 0; color: var(--ink-2); }
 .plain-list { margin: 0; padding-left: 20px; color: var(--ink-2); }
+.pub-list { list-style: none; margin: 0; padding: 0; color: var(--ink-2); }
+.pub-list li { padding: 4px 0 12px; line-height: 1.55; }
+.pub-status { font: 500 11.5px/1 var(--mono); color: var(--accent); background: var(--accent-soft); padding: 4px 8px; border-radius: 999px; margin-left: 4px; }
 .plain-list li { margin: 4px 0; }
 
 /* ───────────────── Responsive ───────────────── */

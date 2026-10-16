@@ -47,6 +47,17 @@ permalink: /about/
     </ul>
   </section>
 
+  {% if a.publications %}
+  <section class="about-section">
+    <h2>Publications</h2>
+    <ul class="pub-list">
+      {% for pub in a.publications %}
+      <li>{{ pub.authors }}, "{% if pub.url %}<a href="{{ pub.url }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}," <em>{{ pub.venue }}</em>.{% if pub.status %} <span class="pub-status">{{ pub.status }}</span>{% endif %}{% if pub.project %} <a href="{{ pub.project | relative_url }}">See the project →</a>{% endif %}</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  {% endif %}
   <section class="about-section">
     <h2>Education</h2>
     <ul class="timeline">

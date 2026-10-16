@@ -74,6 +74,7 @@ Normal paragraph text. **Bold**, *italic*, [a link](https://example.com).
     - Secretary, American Society of Mechanical Engineers (ASME)
     - New role here
   ```
+- Publications: add an entry under `publications:` in `_data/about.yml`. Once the Humanoids paper is on IEEE Xplore, uncomment its `url:` line and paste the link, and change `status:` to `Published`.
 
 ### ⚠️ Two formatting rules for the settings blocks and `.yml` files
 1. **Indentation matters.** Use spaces, not tabs, and match the lines around it.
