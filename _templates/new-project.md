@@ -4,7 +4,6 @@ title: Project Name
 context: Fall Group Project · Northwestern MSR          # small gray line above the title
 summary: One sentence describing what it is and why it matters.
 order: 1               # position on the home page (1 = first); renumber the others if needed
-featured: true         # true = big card up top; false = "More projects" row
 
 thumb: /assets/img/projects/project-name/thumb.jpg     # card image on the home page
 hero_video: /assets/video/project-name.mp4             # delete this line if there's no video…

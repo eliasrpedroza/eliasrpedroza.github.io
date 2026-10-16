@@ -13,11 +13,8 @@ layout: default
 <section id="projects" class="wrap">
   {% assign all = site.projects | sort: "order" %}
   <div class="grid">
-    {% for p in all %}{% if p.featured %}{% assign card_small = false %}{% include project-card.html %}{% endif %}{% endfor %}
+    {% for p in all %}{% include project-card.html %}{% endfor %}
   </div>
 
-  <h2 class="section-label">More projects</h2>
-  <div class="grid grid--small">
-    {% for p in all %}{% unless p.featured %}{% assign card_small = true %}{% include project-card.html %}{% endunless %}{% endfor %}
-  </div>
+  <p class="now-note"><span class="now-label">Now</span> M.S. in Robotics at Northwestern, taking robotic manipulation, robot dynamics, and embedded systems in robotics. Work in progress lives on <a href="https://github.com/{{ site.github }}">GitHub →</a></p>
 </section>

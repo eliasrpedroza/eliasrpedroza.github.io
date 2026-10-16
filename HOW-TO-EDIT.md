@@ -172,6 +172,9 @@ Add entries under `photos:` in `_data/about.yml`. You can also add a picture bes
 
 ---
 
+### The "Now" line on the home page
+Edit the sentence inside `<p class="now-note">` in `index.html`, e.g. to name a project you're building. Delete the whole line to remove it.
+
 ## Adding a new project
 1. Create a folder for its media: `assets/img/projects/<name>/`, and upload the photos there.
 2. Copy `_templates/new-project.md` into `_projects/` and rename it, e.g. `_projects/ergodic-control.md`. **The file name becomes the URL:** `/projects/ergodic-control/`.
@@ -193,11 +196,10 @@ All colors are defined at the top of `assets/css/style.css`:
 --btn-bg: #a8dcb6;      /* resume button */
 --bg: #f5f3ee;          /* page background */
 ```
-Change a hex code, save, and push; the whole site updates. The block under `@media (prefers-color-scheme: dark)` holds the same colors for dark mode.
+Change a hex code, save, and push; the whole site updates. The block under `:root[data-theme="dark"]` holds the same colors for dark mode (the moon/sun button in the header switches modes; light is the default).
 
 Other common tweaks in the same file:
 - **Card grid columns:** `.grid { grid-template-columns: repeat(3, …) }`. Change 3 to 2 for bigger cards.
-- **Wide first card:** the lines marked `first featured project`. Delete them to make every card the same size.
 - **Fonts:** `--sans` and `--mono`. The fonts are loaded in `_layouts/default.html`.
 
 **Tip:** in Chrome, right-click an element → **Inspect** to see which CSS rule styles it. You can try changes there live before editing the file.
