@@ -24,21 +24,28 @@ results:
 
 ## Mission
 
-Venera Nova sends a balloon-borne **aerobot** into Venus's atmosphere for a **48-hour descent from 70 km to 50 km**. Along the way the outside air swings from **225.8 K (−53 °F) to 344.7 K (161 °F)**, while the payload's electronics need to stay near room temperature: **300 K (80 °F)**.
+Venera Nova is a low-cost, Discovery-class concept that would study how Venus's surface and interior interact with its atmosphere: its superrotation, its lack of an intrinsic magnetic field, and the potential for life in its upper clouds. A balloon-borne **aerobot** carries a 1 m³ instrument payload on a **48-hour descent from 70 km to 50 km**, within a 45 kg system mass and a 167.2 W power limit.
+
+Over that descent the outside atmosphere swings from **225.8 K (−53 °F) to 344.7 K (161 °F)**, while the payload's electronics have to stay near room temperature: **300 K (80 °F)**.
 
 **Design constraints:** 300 ± 10 K (80 ± 18 °F) internal, ≤ 18 kg, ≤ 165 W of active heating or cooling, ≤ 1 m² of radiator, ≤ $20 M.
 
 ## Heat Balance
 
-I sized the system with steady-state energy balances at the two extremes, adding up the heat from the sun, sunlight reflected off Venus's clouds, the surrounding atmosphere, and convection on every face.
+I designed the system around steady-state energy balances at the two extremes. Each one adds up every heat path into and out of the cube, then solves for the cooling or heating needed to bring the net to zero:
+
+- **Solar:** 1367 W/m² scaled to Venus's orbit (0.723 AU), on the top face only
+- **Reflected sunlight (albedo):** Venus's 0.75 albedo, with view factors of 1 for the bottom face and 0.3 for the sides
+- **Radiation:** Stefan–Boltzmann exchange between every face and the surrounding atmosphere, using the MLI emissivity on five faces and Z93 on the sixth
+- **Convection:** the aerobot drifts with the wind, so relative velocity ≈ 0 (Nu ≈ 0.3), with CO₂ conductivity evaluated at each case's temperature
 
 <div class="demo-grid">
   <div class="demo">
     <a class="demo-media-link demo-media-link--diagram" href="/assets/img/projects/nasa/hot-case.png"><img class="demo-media" src="/assets/img/projects/nasa/hot-case.png" alt="Hot case heat flow map at 50 km"></a>
     <div class="demo-text">
-    <h3>Hot Case · 50 km · 161 °F outside</h3>
+    <h3>Hot Case · 50 km · 344.7 K (161 °F)</h3>
     <ul>
-      <li><strong>Heat in:</strong> sun, reflected sunlight, and the hot atmosphere</li>
+      <li><strong>Heat in:</strong> 130.8 W solar, 280.5 W reflected sunlight (albedo), and 399.2 W from the hot atmosphere</li>
       <li><strong>Heat out:</strong> 892 W carried to the radiator by the loop heat pipe, using no power</li>
       <li><strong>Net:</strong> 891.5 W in vs. 892 W out → ≈ 0 W</li>
     </ul>
@@ -47,9 +54,9 @@ I sized the system with steady-state energy balances at the two extremes, adding
   <div class="demo">
     <a class="demo-media-link demo-media-link--diagram" href="/assets/img/projects/nasa/cold-case.png"><img class="demo-media" src="/assets/img/projects/nasa/cold-case.png" alt="Cold case heat flow map at 70 km"></a>
     <div class="demo-text">
-    <h3>Cold Case · 70 km · −53 °F outside</h3>
+    <h3>Cold Case · 70 km · 225.8 K (−53 °F)</h3>
     <ul>
-      <li><strong>Conditions:</strong> night side, so no direct sunlight</li>
+      <li><strong>Conditions:</strong> night side, so no direct sunlight; albedo halved in the thinner cloud layer</li>
       <li><strong>Heat added:</strong> 147 W from the thermofoil heater</li>
       <li><strong>Net:</strong> 366.6 W in vs. 366.4 W out → ≈ 0 W</li>
     </ul>
