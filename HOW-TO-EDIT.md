@@ -144,7 +144,7 @@ gallery:
   <!-- copy the <div class="demo"> … </div> block for each card -->
 </div>
 ```
-- For a photo card, swap the `<video …>` line for `<a class="demo-media-link" href="/path/photo.jpg"><img class="demo-media" src="/path/photo.jpg" alt="…"></a>` (clicking it opens the full-size photo).
+- For a photo card, swap the `<video …>` line for `<a class="demo-media-link" href="/path/photo.jpg"><img class="demo-media" src="/path/photo.jpg" alt="…"></a>` (clicking it opens the full-size photo). Add `demo-media-link--fit` next to `demo-media-link` to show the whole photo instead of cropping it to fill the frame.
 - For a **slideshow** that cross-fades between photos (like the op-amp card), use this in place of the media line. Add `slide--contain` to a slide to show the whole image instead of filling the frame; change the speed with `data-interval="3500"` (milliseconds) on the outer div:
   ```html
   <div class="demo-media slideshow">
@@ -160,7 +160,7 @@ Upload the new file **with the same name** to replace the old one. Nothing else 
 
 ### Change a project's card image or top image
 Edit `thumb:` (the card on the home page) and `hero_image:` or `hero_video:` (the top of the project page).
-Add `hero_side: true` to show a smaller hero video beside the Results box (used on IRIS); remove it to put the video back on top at full size.
+Add `hero_max_width: 680px` to shrink a landscape top video (used on GOAL!). Add `hero_side: true` to show a smaller hero video beside the Results box (used on IRIS); remove it to put the video back on top at full size.
 
 ### About page photos
 Add entries under `photos:` in `_data/about.yml`. You can also add a picture beside an experience entry by un-commenting its `image:` line.

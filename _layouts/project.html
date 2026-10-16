@@ -13,7 +13,7 @@ layout: default
     {% if page.hero_video and page.hero_side %}
     {% comment %} hero_side: video sits beside the Results box below {% endcomment %}
     {% elsif page.hero_video %}
-    <figure class="hero{% if page.hero_portrait %} hero--portrait{% endif %}">
+    <figure class="hero{% if page.hero_portrait %} hero--portrait{% endif %}"{% if page.hero_max_width %} style="max-width: {{ page.hero_max_width }}; margin-left: auto; margin-right: auto"{% endif %}>
       <video src="{{ page.hero_video | relative_url }}" poster="{{ page.hero_poster | relative_url }}" autoplay muted loop playsinline controls></video>
       {% if page.hero_caption %}<figcaption>{{ page.hero_caption }}</figcaption>{% endif %}
     </figure>

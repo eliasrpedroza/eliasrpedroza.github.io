@@ -262,6 +262,9 @@ img.demo-media { height: 100%; object-fit: cover; border: 1px solid var(--line);
 .demo-media-link img.demo-media { aspect-ratio: auto; }
 .demo-media-link--diagram { background: #fff; border: 1px solid var(--line); }
 .demo-media-link--diagram img.demo-media { object-fit: contain; border: 0; }
+/* Photos shown whole (no cropping) on a soft background */
+.demo-media-link--fit { background: var(--bg); border: 1px solid var(--line); }
+.demo-media-link--fit img.demo-media { object-fit: contain; border: 0; }
 .demo-text { padding: 0 4px 4px; }
 .demo-text h3 { margin: 0 0 6px; font-size: 17px; }
 .demo-text p { margin: 0 0 8px; font-size: 15px; }
