@@ -97,6 +97,21 @@ Normal paragraph text. **Bold**, *italic*, [a link](https://example.com).
 </figure>
 ```
 
+**Text beside a picture** (picture on the right, stacks on phones; used on IRIS "The Problem"). Leave the blank lines inside the inner `<div>` so the text is still read as Markdown:
+```html
+<div class="split" markdown="1">
+<div markdown="1">
+
+Your **paragraphs** go here.
+
+</div>
+<figure>
+  <img src="/assets/img/projects/iris/new-photo.jpg" alt="What it shows">
+  <figcaption>Caption text.</figcaption>
+</figure>
+</div>
+```
+
 **A row of images** in the body:
 ```html
 <div class="gallery">

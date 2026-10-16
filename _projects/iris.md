@@ -27,14 +27,19 @@ results:
 
 ## The Problem
 
+<div class="split" markdown="1">
+<div markdown="1">
+
 The Robotic Systems Lab's REEF sensor network logs data on the Palos Verdes Reef, but getting that data back takes a boat, two divers, and a full day, at roughly $800+ per trip. **IRIS** sits next to REEF on the seafloor. On a schedule, a winch releases a tethered buoy, the buoy surfaces and uploads the data over LTE-M cellular, and the winch reels it back down out of reach of boats and waves.
 
+**My piece was the buoy:** it had to keep the electronics dry at depth, let cellular signal through, and float upright with the antenna clear of the water every time it surfaced.
+
+</div>
 <figure>
   <img src="/assets/img/projects/iris/conops.jpg" alt="IRIS concept of operations">
   <figcaption>Concept of operations: the buoy stays submerged between cycles, surfaces to transmit, and is retracted.</figcaption>
 </figure>
-
-**My piece was the buoy:** it had to keep the electronics dry at depth, let cellular signal through, and float upright with the antenna clear of the water every time it surfaced.
+</div>
 
 ## Buoy Design
 
@@ -139,7 +144,7 @@ In the final end-to-end test in SCU's pool, IRIS ran its full cycle with no inte
     <div class="demo-text">
     <h3>Winch & Brake</h3>
     <ul>
-      <li><strong>Drive:</strong> Blue Trail SER-2130 submersible servo (CAN, magnetic encoder) through an acetal gearbox</li>
+      <li><strong>Drive:</strong> Blue Trail SER-2130 submersible servo through an acetal gearbox. The controller commands it over <strong>CAN bus</strong> with a target number of turns, and reads back its magnetic-encoder position to confirm</li>
       <li><strong>Brake:</strong> a titanium ratchet and spring pawl hold the positively buoyant buoy down; a second servo lifts the pawl only to release, so it draws no power while holding</li>
       <li><strong>Build:</strong> acetal structure, 316 stainless hardware, polypropylene rope; 100 raise/lower cycles in a repeatability test (a deployment needs 24)</li>
     </ul>
