@@ -43,6 +43,8 @@ The Robotic Systems Lab's REEF sensor network logs data on the Palos Verdes Reef
 
 ## Buoy Design
 
+*The buoy-and-winch concept was chosen over several alternatives in a weighted trade study (details in the thesis).*
+
 ### Choosing the Enclosure
 
 - **First option, a donated Blue Ocean Gear buoy shell:** proven for cellular, but it would need a hole bored through it for the data cable, and it was too small to trust while anchored at the surface
