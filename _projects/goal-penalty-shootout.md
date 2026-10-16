@@ -5,10 +5,12 @@ summary: A coin-operated, two-player electromechanical arcade game that recreate
 order: 4
 featured: true
 thumb: /assets/img/projects/goal/final.jpg
-hero_image: /assets/img/projects/goal/final.jpg
-role: Mechanical design and fabrication, Arduino game logic, wiring and integration
-timeline: Graduate course project
-# team: ["Teammate Name"]
+hero_video: /assets/video/goal/gameplay.mp4
+hero_poster: /assets/video/goal/gameplay.jpg
+hero_caption: "Full match walkthrough: coin start, countdown, shots and saves, and the end-of-game sequence."
+timeline: Fall 2025 (graduate course project)
+team: ["Ysidro Magaña"]
+team_note: "We designed, built, and programmed every part of the game together."
 tags: [Arduino Mega, SOLIDWORKS, Laser cutting, 3D printing, Servos]
 results:
   - "**Ran for 6 hours straight** at a public demo"
@@ -18,7 +20,7 @@ results:
 
 ## Gameplay
 
-One player controls the kicker and the other the goalkeeper, each with a joystick. A coin starts the match. Players alternate penalties for 10 rounds, with sudden death if tied, while LEDs, a 7-segment scoreboard, and MP3 audio react to each shot.
+Two players face off as the kicker and the goalkeeper. A penny starts the game with a countdown and intro audio. Each round, both players get a **10-second countdown** to pick a direction on their joystick, with walls between the stations so neither can see the other's pick. The kicker runs up, the goalkeeper dives, and the LED scoreboard, 7-segment display, and audio react to the result. Players alternate for 10 shots, and a draw goes to sudden death.
 
 ## Mechanical Design
 
@@ -38,7 +40,7 @@ One player controls the kicker and the other the goalkeeper, each with a joystic
 - **Arduino Mega** runs the game state machine: coin → rounds → sudden death → reset
 - **Inputs:** two joysticks and the optical coin sensor
 - **Outputs:** LED strips, 7-segment displays, MP3 audio, and the kicker and goalkeeper servos
-- **Wiring:** power, signal, and actuator lines organized into a clean, serviceable layout
+- **Wiring:** separate power, signal, and actuator runs that held up through a 6-hour public demo
 
 <div class="gallery">
   <figure><img src="/assets/img/projects/goal/electronics.jpg" alt="Electronics breadboard"></figure>
@@ -46,6 +48,6 @@ One player controls the kicker and the other the goalkeeper, each with a joystic
   <figure><img src="/assets/img/projects/goal/build.jpg" alt="Build session"></figure>
 </div>
 
-## Results
+## Looking Back
 
-The finished game ran without interruption through a 6-hour public demo, with full 10-round matches, sudden death, and automatic resets between players.
+The wiring worked, but it was point-to-point. After seeing production wire harnesses on humanoid robots at 1X, I'd rebuild it as a harness: bundled, labeled runs with a connector at each subsystem, so the joysticks, servos, and scoreboard could each be unplugged and serviced on their own.
