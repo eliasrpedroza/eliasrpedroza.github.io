@@ -24,9 +24,7 @@ results:
 
 ## Mission
 
-Venera Nova is a low-cost, Discovery-class concept that would study how Venus's surface and interior interact with its atmosphere: its superrotation, its lack of an intrinsic magnetic field, and the potential for life in its upper clouds. A balloon-borne **aerobot** carries a 1 m³ instrument payload on a **48-hour descent from 70 km to 50 km**, within a 45 kg system mass and a 167.2 W power limit.
-
-Over that descent the outside atmosphere swings from **225.8 K (−53 °F) to 344.7 K (161 °F)**, while the payload's electronics have to stay near room temperature: **300 K (80 °F)**.
+Venera Nova sends a balloon-borne **aerobot** into Venus's atmosphere for a **48-hour descent from 70 km to 50 km**. Along the way the outside air swings from **225.8 K (−53 °F) to 344.7 K (161 °F)**. My task was to keep the payload's electronics and scientific instruments at functional temperatures, holding them near room temperature: **300 K (80 °F)**.
 
 **Design constraints:** 300 ± 10 K (80 ± 18 °F) internal, ≤ 18 kg, ≤ 165 W of active heating or cooling, ≤ 1 m² of radiator, ≤ $20 M.
 
@@ -36,7 +34,7 @@ I designed the system around steady-state energy balances at the two extremes. E
 
 - **Solar:** 1367 W/m² scaled to Venus's orbit (0.723 AU), on the top face only
 - **Reflected sunlight (albedo):** Venus's 0.75 albedo, with view factors of 1 for the bottom face and 0.3 for the sides
-- **Radiation:** Stefan–Boltzmann exchange between every face and the surrounding atmosphere, using the MLI emissivity on five faces and Z93 on the sixth
+- **Radiation:** Stefan–Boltzmann law, q = εσA(T⁴ − T<sub>atm</sub>⁴) with σ = 5.67 × 10⁻⁸ W/m²·K⁴, using each face's emissivity (ε): MLI on five faces, Z93 on the sixth
 - **Convection:** the aerobot drifts with the wind, so relative velocity ≈ 0 (Nu ≈ 0.3), with CO₂ conductivity evaluated at each case's temperature
 
 <div class="demo-grid">
