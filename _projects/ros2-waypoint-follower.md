@@ -11,17 +11,19 @@ hero_portrait: true
 hero_side: true
 hero_caption: One full lap through six waypoints. Pink markers point toward the next waypoint; the orange line is the path actually driven.
 timeline: Oct 2026
-tags: [ROS 2, Python, Feedback control, rosbag2]
+tags: [ROS 2, Python, Feedback control, Linux]
 results:
   - "**Closed-loop control at 100 Hz** reaches every waypoint despite noise on every velocity command"
   - "**One lap in 19.13 s**, driving 0.33 m less than the straight-line loop by cutting corners within the 0.04 m arrival tolerance"
   - "**Custom ROS 2 interfaces:** a service to load waypoints and a message reporting distance, error, and time each lap"
-  - "**Recorded and replayed** the run's commands with rosbag2"
 ---
 
 ## System
 
-{% include turtle-graph.html %}
+<figure>
+  <a href="/assets/img/projects/turtle/rqt-graph.png"><img src="/assets/img/projects/turtle/rqt-graph.png" alt="rqt_graph of the running system: waypoint, corrupt, and turtlesim nodes and the topics between them"></a>
+  <figcaption>The running system in rqt_graph. The waypoint node also calls turtlesim's <code>reset</code>, <code>set_pen</code>, and <code>teleport_absolute</code> services to draw the markers.</figcaption>
+</figure>
 
 - **waypoint:** loads waypoints through a custom `LoadWaypoints` service, starts and stops on `/toggle`, and steers toward the current target using pose feedback
 - **corrupt:** sits between the controller and the robot and adds Gaussian noise proportional to each command, like motors that don't quite do what they're told
@@ -35,27 +37,15 @@ results:
 
 ## Drawing the Markers
 
-<div class="split" markdown="1">
-<div markdown="1">
+When waypoints load, the node resets the sim and draws a triangle at each one, pointing toward the next. It chains turtlesim's `set_pen` and `teleport_absolute` services with **async service calls in their own callback group**, so the node can wait on turtlesim from inside a service callback without deadlocking. I worked out the geometry by hand first: forward along the heading (cos θ, sin θ) for the tip, and sideways (−sin θ, cos θ) for the base corners.
 
-When waypoints load, the node resets the sim and draws a triangle at each one, pointing toward the next. It chains turtlesim's `set_pen` and `teleport_absolute` services with **async service calls in their own callback group**, so the node can wait on turtlesim from inside a service callback without deadlocking.
-
-I worked out the geometry by hand first: forward along the heading (cos θ, sin θ) for the tip, and sideways (−sin θ, cos θ) for the base corners.
-
-</div>
-<figure>
-  <a href="/assets/img/projects/turtle/triangle-sketch.jpg"><img src="/assets/img/projects/turtle/triangle-sketch.jpg" alt="Hand sketch of the triangle-drawing geometry and pen-up/pen-down sequence"></a>
-  <figcaption>My planning sketch for the marker geometry.</figcaption>
-</figure>
-</div>
-
-## Bag Replay
-
-<div class="split" markdown="1">
-<div markdown="1">
-
-I recorded the velocity commands from a run with **rosbag2** and played them back into a fresh sim. With no controller correcting it, the replay starts from a different pose and has no pose feedback, so it traces a similar zigzag that lands nowhere near the waypoints. That shows why the controller closes the loop on pose.
-
-</div>
-<video class="demo-media" style="aspect-ratio: 1 / 1" src="/assets/video/turtle/bag-replay.mp4" poster="/assets/video/turtle/bag-replay.jpg" muted loop playsinline controls preload="metadata" data-autoplay></video>
+<div class="demo-grid">
+  <div class="demo">
+    <video class="demo-media" style="aspect-ratio: 1 / 1" src="/assets/video/turtle/drawing.mp4" poster="/assets/video/turtle/drawing.jpg" muted loop playsinline controls preload="metadata" data-autoplay></video>
+    <div class="demo-text"><h3>Markers being drawn</h3><p>Slowed down 2.5×: the turtle teleports with the pen up and down to trace each triangle.</p></div>
+  </div>
+  <div class="demo">
+    <a class="demo-media-link demo-media-link--fit" style="aspect-ratio: 1 / 1" href="/assets/img/projects/turtle/triangle-sketch.jpg"><img class="demo-media" src="/assets/img/projects/turtle/triangle-sketch.jpg" alt="Hand sketch of the triangle-drawing geometry and pen-up/pen-down sequence"></a>
+    <div class="demo-text"><h3>Planning sketch</h3><p>The pen-up/pen-down sequence and the geometry for each triangle.</p></div>
+  </div>
 </div>
