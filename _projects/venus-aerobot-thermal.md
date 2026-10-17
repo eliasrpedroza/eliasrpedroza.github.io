@@ -2,7 +2,7 @@
 title: Venus Aerobot Thermal Control
 context: NASA L'SPACE Mission Concept Academy · Team 27
 summary: Thermal control subsystem for Venera Nova, a Venus aerobot mission concept, keeping the payload near room temperature (300 K / 80 °F) through a 48-hour descent through Venus's atmosphere.
-order: 5
+order: 6
 featured: true
 wide: true
 thumb: /assets/img/projects/nasa/card.png

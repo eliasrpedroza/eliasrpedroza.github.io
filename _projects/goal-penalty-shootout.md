@@ -2,7 +2,7 @@
 title: "GOAL! Penalty Shootout Arcade Game"
 context: Advanced Mechatronics I (Graduate) · Santa Clara University
 summary: A coin-operated, two-player electromechanical arcade game that recreates the pressure of a penalty shootout with real-time motion, sound, and lights.
-order: 4
+order: 5
 featured: true
 wide: true
 thumb: /assets/img/projects/goal/final.jpg

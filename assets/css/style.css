@@ -184,6 +184,19 @@ figcaption { font-size: 13.5px; color: var(--muted); margin-top: 8px; text-align
   .hero-side .hero { max-width: 380px; margin: 0 auto; width: 100%; }
 }
 
+/* ROS node graph (inline SVG) */
+.node-graph { margin: 20px 0 28px; }
+.node-graph svg { width: 100%; height: auto; display: block; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 10px; }
+.ng-node { fill: var(--bg); stroke: var(--line); stroke-width: 1.5; }
+.ng-mine { fill: var(--accent-soft); stroke: var(--accent-fill); }
+.ng-name { font: 600 17px var(--mono); fill: var(--ink); }
+.ng-sub { font: 12.5px var(--sans); fill: var(--muted); }
+.ng-topic { font: 500 12px var(--mono); fill: var(--accent); }
+.ng-label { font: 12.5px var(--sans); fill: var(--ink-2); }
+.ng-edge { stroke: var(--ink-2); stroke-width: 1.6; fill: none; }
+.ng-feedback { stroke-dasharray: 5 4; }
+.ng-head { fill: var(--ink-2); }
+
 /* Text beside a figure (figure on the right) */
 .split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 28px; align-items: center; margin: 0 0 24px; }
 .split > div > :first-child { margin-top: 0; }

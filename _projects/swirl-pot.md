@@ -2,7 +2,7 @@
 title: Swirl Pot Selection
 context: Bronco Racing · Formula SAE Electric
 summary: CFD-based selection of a swirl pot for coolant deaeration in an electric FSAE car's cooling loop.
-order: 7
+order: 8
 thumb: /assets/img/projects/swirl/thumb.jpg
 hero_side: true
 hero_slides_ratio: 1 / 1

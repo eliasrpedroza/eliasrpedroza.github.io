@@ -2,7 +2,7 @@
 title: RC Aircraft Landing Gear
 context: Mechanical design course · Santa Clara University
 summary: A retractable main landing gear for a Bobcat-52 RC aircraft, designed in SOLIDWORKS and checked with torque calculations and FEA.
-order: 8
+order: 9
 thumb: /assets/img/projects/rc/thumb.jpg
 hero_side: true
 hero_slides_ratio: 4 / 3

@@ -2,7 +2,7 @@
 title: Circuits & Embedded Systems Practice
 context: Independent practice · Sensors, actuators & circuits
 summary: Eight hands-on builds, from an ultrasonic rangefinder and PWM motor control to op-amp and 555 timing circuits, that built the embedded and electronics skills later used in GOAL! and IRIS.
-order: 6
+order: 7
 featured: false
 thumb: /assets/img/projects/circuits/thumb.jpg
 preview: /assets/video/previews/circuits.mp4   # plays on the home-page card while hovered
