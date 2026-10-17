@@ -165,7 +165,7 @@ Add `preview: /assets/video/previews/<name>.mp4` to play a short, silent clip on
 Add `hero_max_width: 680px` to shrink a landscape top video (used on GOAL!). With `hero_side: true`, a `hero_slides:` list (each item has `src:`, `label:`, `alt:`) shows a cross-fading slideshow instead of a video, like the RC Landing Gear page. You can also add a `side_photos:` list (each item has `src:` and `alt:`) to show a row of small portrait photos under the Results box, like the Wig Wag page. Add `hero_side: true` to show a smaller hero video beside the Results box (used on IRIS); remove it to put the video back on top at full size.
 
 ### About page photos
-Add entries under `photos:` in `_data/about.yml`. You can also add a picture beside an experience entry by un-commenting its `image:` line.
+Add entries under `photos:` in `_data/about.yml`. A clip works too: add a `video:` line (see the commented soccer example there). The grid fits however many you add, and on phones it becomes a swipeable row. You can also add a picture beside an experience entry by un-commenting its `image:` line.
 
 ### Size tips
 - Photos: resize to about **1600 px wide**, JPG, under about 500 KB. Phone photos are around 5 MB and slow the site down.

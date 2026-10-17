@@ -43,12 +43,12 @@ education:
     when: Jun 2026
 
 skills:
-  - area: CAD & simulation
-    list: SOLIDWORKS (Certified Associate), Siemens NX, Ansys FEA/CFD
   - area: Software
-    list: Python, MATLAB/Simulink, ROS, MoveIt, Git, Linux
+    list: Python, C/C++, ROS 2 / ROS, MoveIt, MATLAB/Simulink, Linux, Git
+  - area: CAD & simulation
+    list: SOLIDWORKS (CSWA), Siemens NX, Ansys (FEA, CFD), GD&T
   - area: Hardware
-    list: Arduino, circuit design, soldering, 3D printing (FDM, SLS), laser cutting, CNC milling, lathe, GD&T
+    list: Arduino, circuit design, soldering, 3D printing (FDM, SLS), silicone molding, laser cutting, CNC milling, lathe
 
 leadership:
   - Community Outreach Director, Society of Hispanic Professional Engineers (SHPE)
@@ -56,16 +56,16 @@ leadership:
   - Pi Tau Sigma Mechanical Engineering Honor Society
   - "Course Grader, Mechatronics: Haptics (graduate)"
   - Summer Engineering Seminar Mentor
-  - "Outside the lab: soccer and futsal"
 
 # Photo strip at the bottom of the About page. Add as many as you like.
 photos:
+  - src: /assets/img/about/shpe-suenos.jpg
+    caption: With SHPE at a Sueños in Motion event
   - src: /assets/img/projects/goal/build.jpg
     caption: Building GOAL! for Advanced Mechatronics
-  - src: /assets/img/projects/iris/buoy-winch-dock.jpg
-    caption: IRIS buoy and winch before a water test
-  - src: /assets/img/projects/wigwag/mill.jpg
-    caption: Machining the wig wag motor
+  - src: /assets/img/about/soccer.jpg       # still shown before the clip plays
+    video: /assets/video/about/soccer.mp4
+    caption: On the pitch
 
 # Papers and talks, newest first
 publications:

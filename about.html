@@ -18,8 +18,8 @@ permalink: /about/
     <div>
       <h1>Hi, I'm Elias.</h1>
       <!-- ✏️ Intro text: edit these two paragraphs directly -->
-      <p>I'm a robotics engineer with a mechanical engineering foundation, currently pursuing an M.S. in Robotics at Northwestern University. I graduated cum laude in Mechanical Engineering from Santa Clara University.</p>
-      <p>My work sits between hardware and software: designing mechanisms, building and debugging electromechanical systems, and increasingly, the controls and manipulation that make them useful. Outside of projects, I've served as Community Outreach Director for SHPE and Secretary of ASME, and I've mentored students in SCU's Summer Engineering Seminar.</p>
+      <p>I'm a robotics engineer with a mechanical engineering foundation, currently pursuing an M.S. in Robotics at Northwestern University after recently graduating from Santa Clara University.</p>
+      <p>My work sits between hardware and software: designing mechanisms, building and debugging electromechanical systems, and now learning the controls and manipulation that make them useful. Outside of projects, I've served as Community Outreach Director for SHPE and Secretary of ASME and mentored students in SCU's Summer Engineering Seminar. I also play soccer and futsal whenever I can.</p>
       <div class="about-actions">
         <a class="btn btn--primary" href="{{ site.resume | relative_url }}" target="_blank" rel="noopener">Resume (PDF)</a>
         <a class="btn" href="https://www.linkedin.com/in/{{ site.linkedin }}">LinkedIn</a>
@@ -59,37 +59,38 @@ permalink: /about/
 
   {% endif %}
   <section class="about-section">
-    <h2>Education</h2>
-    <ul class="timeline">
-      {% for ed in a.education %}
-      <li>
-        <span class="when">{{ ed.when }}</span>
-        <div><h3>{{ ed.degree }}</h3><p class="org">{{ ed.school }} · {{ ed.location }}</p></div>
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
-
-  <section class="about-section">
     <h2>Skills</h2>
     <dl class="skills">
       {% for sk in a.skills %}<dt>{{ sk.area }}</dt><dd>{{ sk.list }}</dd>{% endfor %}
     </dl>
   </section>
 
+  <div class="about-pair">
   <section class="about-section">
-    <h2>Leadership &amp; interests</h2>
-    <ul class="plain-list">
-      {% for l in a.leadership %}<li>{{ l }}</li>{% endfor %}
-    </ul>
-  </section>
+      <h2>Education</h2>
+      <ul class="timeline">
+        {% for ed in a.education %}
+        <li>
+          <span class="when">{{ ed.when }}</span>
+          <div><h3>{{ ed.degree }}</h3><p class="org">{{ ed.school }} · {{ ed.location }}</p></div>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+  <section class="about-section">
+      <h2>Leadership &amp; activities</h2>
+      <ul class="plain-list">
+        {% for l in a.leadership %}<li>{{ l }}</li>{% endfor %}
+      </ul>
+    </section>
+  </div>
 
   {% if a.photos %}
   <section class="about-section">
     <h2>Photos</h2>
-    <div class="photo-grid">
+    <div class="photo-grid" style="--n: {{ a.photos.size }}">
       {% for ph in a.photos %}
-      <figure><img src="{{ ph.src | relative_url }}" alt="{{ ph.caption }}" loading="lazy">{% if ph.caption %}<figcaption>{{ ph.caption }}</figcaption>{% endif %}</figure>
+      <figure>{% if ph.video %}<video src="{{ ph.video | relative_url }}" poster="{{ ph.src | relative_url }}" muted loop playsinline controls preload="metadata" data-autoplay></video>{% else %}<img src="{{ ph.src | relative_url }}" alt="{{ ph.caption }}" loading="lazy">{% endif %}{% if ph.caption %}<figcaption>{{ ph.caption }}</figcaption>{% endif %}</figure>
       {% endfor %}
     </div>
   </section>
