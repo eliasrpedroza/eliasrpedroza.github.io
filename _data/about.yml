@@ -44,7 +44,7 @@ education:
 
 skills:
   - area: Software
-    list: Python, C/C++, ROS 2 / ROS, MoveIt, MATLAB/Simulink, Linux, Git
+    list: Python, C/C++, ROS 2 / ROS, MoveIt, MATLAB, Linux, Git
   - area: CAD & simulation
     list: SOLIDWORKS (CSWA), Siemens NX, Ansys (FEA, CFD), GD&T
   - area: Hardware

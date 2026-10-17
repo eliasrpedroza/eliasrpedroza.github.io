@@ -2,10 +2,10 @@
 #  Site settings — edit these, then push. GitHub rebuilds the site.
 # ─────────────────────────────────────────────────────────────
 title: Elias Pedroza
-tagline: Robotics Engineer
+tagline: Engineer
 description: >-
-  Robotics portfolio of Elias Pedroza. M.S. Robotics student at Northwestern
-  University; B.S. Mechanical Engineering, Santa Clara University.
+  Engineering portfolio of Elias Pedroza. M.S. Robotics student at Northwestern
+  University, B.S. Mechanical Engineering from Santa Clara University.
 url: "https://eliasrpedroza.github.io"
 baseurl: ""
 
