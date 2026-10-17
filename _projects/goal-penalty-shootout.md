@@ -45,7 +45,7 @@ When the clock hits zero, the picks lock in: **different spot = GOAL!, same spot
     <h3>Concept Sketch</h3>
     <ul>
       <li>The first idea: hidden shot/save selectors, a servo goalie with five dive positions, LEDs for goals and misses, and players that run up to the penalty spot</li>
-      <li>Buttons became joysticks; the hidden picks, servo goalie, LED scoreboard, and run-up made it to the final build</li>
+      <li>Buttons became joysticks. The hidden picks, servo goalie, LED scoreboard, and run-up made it to the final build</li>
     </ul>
     </div>
   </div>

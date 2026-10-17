@@ -9,7 +9,7 @@ hero_video: /assets/video/turtle/waypoints.mp4
 hero_poster: /assets/video/turtle/waypoints.jpg
 hero_portrait: true
 hero_side: true
-hero_caption: "Load, start, pause, and resume through the /toggle service, then one full lap through six waypoints (2× speed while moving). Pink markers point to the next waypoint; orange is the path driven."
+hero_caption: "Load, start, pause, and resume through the /toggle service, then one full lap through six waypoints (2× speed while moving). Pink markers point to the next waypoint. Orange is the path driven."
 timeline: Oct 2026
 tags: [ROS 2, Python, Feedback control, Linux]
 results:
@@ -43,7 +43,7 @@ results:
 
 - **Heading:** the error to the target is wrapped to ±π so the robot always turns the short way, and the turn rate is 6× that error
 - **Speed:** it only drives forward once it's pointed within 0.2 rad of the target, at 1.5× the remaining distance, so it slows as it arrives
-- **Arrival:** within 0.04 m, it moves on to the next waypoint; finishing the loop publishes the lap's distance, error, and time
+- **Arrival:** within 0.04 m, it moves on to the next waypoint. Finishing the loop publishes the lap's distance, error, and time
 
 ## Drawing the Markers
 

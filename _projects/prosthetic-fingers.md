@@ -18,7 +18,7 @@ hero_slides:
   - src: /assets/img/projects/dart/finger-grasp.jpg
     label: Two-finger grasp
     alt: Two fingers locked around a box of gloves
-hero_caption: Under vacuum the finger joints lock and hold the grasp; the red bands on the back pull the fingers open again when released.
+hero_caption: Under vacuum the finger joints lock and hold the grasp. The red bands on the back pull the fingers open again when released.
 role: "Finger subsystem: laminar-jamming flexures, molds, finger structure and tube routing, whiffletree, and early test rigs"
 timeline: Jun 2025 – Jun 2026
 team: ["Sophie Jacqmotte-Parks", "Nicos Katigbak", "Parnia Ayoubi"]
@@ -63,7 +63,7 @@ Body-powered prostheses are cheap, but the user has to keep pulling on a shoulde
     <h3>Whiffletree</h3>
     <ul>
       <li>Splits one cable pull from the harness across both fingers, so they close together and wrap around uneven objects</li>
-      <li>Scaled down to fit the back of the hand; I started a more compact drum-based version for the next design</li>
+      <li>Scaled down to fit the back of the hand. I started a more compact drum-based version for the next design</li>
     </ul>
     </div>
   </div>
@@ -76,7 +76,7 @@ Body-powered prostheses are cheap, but the user has to keep pulling on a shoulde
     <div class="demo-text">
     <h3>Molds &amp; Casting</h3>
     <ul>
-      <li>3-part printed molds (top, core, base); the core forms the sealed chamber and the tube path</li>
+      <li>3-part printed molds (top, core, base). The core forms the sealed chamber and the tube path</li>
       <li>A double-flexure mold with an angled tube exit fixed early leaks and tubes slipping out</li>
       <li>Sandpaper goes in through a slit, then sealed with Sil-Poxy</li>
     </ul>
@@ -87,8 +87,8 @@ Body-powered prostheses are cheap, but the user has to keep pulling on a shoulde
     <div class="demo-text">
     <h3>Layers &amp; Geometry</h3>
     <ul>
-      <li><strong>Layers:</strong> compared copy paper and P180–P800 sandpaper; mid grits jammed best, P180 was too thick and copy paper too slick</li>
-      <li><strong>Geometry:</strong> stiffness scales with thickness cubed, so I added thickness before width; a plain rectangular stack beat an I-beam layout</li>
+      <li><strong>Layers:</strong> compared copy paper and P180–P800 sandpaper. Mid grits jammed best, P180 was too thick and copy paper too slick</li>
+      <li><strong>Geometry:</strong> stiffness scales with thickness cubed, so I added thickness before width. A plain rectangular stack beat an I-beam layout</li>
       <li><strong>Result:</strong> flexures 55% thinner, walls cut from ~1.5 to ~1 mm</li>
     </ul>
     </div>
@@ -100,9 +100,9 @@ Body-powered prostheses are cheap, but the user has to keep pulling on a shoulde
 <div class="split" markdown="1">
 <div markdown="1">
 
-- **Proof of concept:** bent the finger, pulled vacuum, and hung weights from the tip; it held its pose, then relaxed when the vacuum was released
+- **Proof of concept:** bent the finger, pulled vacuum, and hung weights from the tip → it held its pose, then relaxed when the vacuum was released
 - **Early rigs (mine):** settled on a one-sided clamp with a point load at the tip, after a two-ended rig twisted the flexure
-- **Published test (team):** a force gauge on a linear stage pushed the fingertip 40 mm at 0–700 mmHg. Stiffness rose with vacuum to 4.9 N at the tip; thicker flexures are the next step toward the 10–15 N grasp benchmark
+- **Published test (team):** a force gauge on a linear stage pushed the fingertip 40 mm at 0–700 mmHg. Stiffness rose with vacuum to 4.9 N at the tip. Thicker flexures are the next step toward the 10–15 N grasp benchmark
 
 </div>
 <div class="demo-media slideshow" style="aspect-ratio: 4 / 3">
@@ -116,7 +116,7 @@ Body-powered prostheses are cheap, but the user has to keep pulling on a shoulde
 <div class="split" markdown="1">
 <div markdown="1">
 
-*Built and tested as a team; shown for context.*
+*Built and tested as a team, shown for context.*
 
 The hand pairs my fingers with a granular-jamming palm (a balloon of glass beads) and weighs 529 g, with under $70 in parts. Worn on a body-powered simulator, it handled wrap, pinch, and palmar grasps, and in pullout tests the jamming palm held up to **52.9 N**, matching or beating a rigid palm in every case.
 

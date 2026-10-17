@@ -18,7 +18,7 @@ docs:
 results:
   - "**Payload held at 300 K (80 °F)** while outside temperatures ranged from −53 °F to 161 °F, with ≈ 0 W net heat flow"
   - "**892 W rejected with zero power** in the hot case by a loop heat pipe and radiator"
-  - "**15.86 kg subsystem mass**, under the 18 kg allocation; 147 W peak heater draw within a 165 W budget"
+  - "**15.86 kg subsystem mass**, under the 18 kg allocation. 147 W peak heater draw within a 165 W budget"
   - "**Co-authored and presented the 191-page Preliminary Design Review** to NASA evaluators"
 ---
 
@@ -54,7 +54,7 @@ I designed the system around steady-state energy balances at the two extremes. E
     <div class="demo-text">
     <h3>Cold Case · 70 km · 225.8 K (−53 °F)</h3>
     <ul>
-      <li><strong>Conditions:</strong> night side, so no direct sunlight; albedo halved in the thinner cloud layer</li>
+      <li><strong>Conditions:</strong> night side, so no direct sunlight. Albedo halved in the thinner cloud layer</li>
       <li><strong>Heat added:</strong> 147 W from the thermofoil heater</li>
       <li><strong>Net:</strong> 366.6 W in vs. 366.4 W out → ≈ 0 W</li>
     </ul>
@@ -69,8 +69,8 @@ A mostly **passive** design keeps power use low. The heater is the only part tha
 | Component | Function | Mass | TRL |
 |---|---|---|---|
 | Multi-layer insulation (5 faces) | Blocks heat gain and loss | 3.5 kg | 7 |
-| Z93 white coating | Reflects sunlight, emits heat; on the radiator face | ~0 | 7 |
-| Al 6061 radiator | Dumps heat to the atmosphere; 0.425 m² | 6.36 kg | 6 |
+| Z93 white coating | Reflects sunlight, emits heat. On the radiator face | ~0 | 7 |
+| Al 6061 radiator | Dumps heat to the atmosphere. 0.425 m² | 6.36 kg | 6 |
 | Loop heat pipe | Carries heat from the electronics to the radiator, with no power | 4 kg | 6 |
 | Thermofoil heater | Adds up to 147 W in the cold case | 3 g | 8 |
 | **Total** | | **15.86 kg** | **6** |
@@ -109,7 +109,7 @@ A mostly **passive** design keeps power use low. The heater is the only part tha
     <h3>Thermofoil Heater</h3>
     <ul>
       <li>Minco HAP6948-1 flexible polyimide heater, bonded to the internal chassis wall so heat spreads by conduction</li>
-      <li>Rated to 170.9 W; capped at 162.7 W by the power budget, against a 147 W need <span class="credit">(drawing: Minco)</span></li>
+      <li>Rated to 170.9 W, capped at 162.7 W by the power budget, against a 147 W need <span class="credit">(drawing: Minco)</span></li>
     </ul>
     </div>
   </div>

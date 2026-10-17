@@ -37,9 +37,9 @@ hero_slides:
     alt: Still from the scored run in the maze
 hero_caption: "Stills from the scored run, sharpened from phone video. Near the end the gripper reaches the last sock but can't hold it."
 team: ["Armon Choudhry"]
-tags: [ROS, MoveIt, Python, RViz]
+tags: [ROS, MoveIt, Python, Mobile manipulation]
 results:
-  - "**Reached 3 of 4 QR targets** and delivered one sock; the gripper reached a second but couldn't hold it before time ran out"
+  - "**Reached 3 of 4 QR targets** and delivered one sock. The gripper reached a second but couldn't hold it before time ran out"
   - "**Tied for the highest score** in the course section"
   - "**No teleoperation:** the run went start to finish on real hardware with no one at the controls"
 ---

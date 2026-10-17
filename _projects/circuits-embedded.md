@@ -51,7 +51,7 @@ wide: true   # wider page column so the two-across grid has room
     <ul>
       <li><strong>STOP/GO:</strong> both LEDs off in STOP</li>
       <li><strong>SLOW/FAST:</strong> ~3 s vs. ~1 s per LED state</li>
-      <li><strong>Hardware:</strong> transistor-driven LEDs; switch inputs conditioned so they never float</li>
+      <li><strong>Hardware:</strong> transistor-driven LEDs. Switch inputs conditioned so they never float</li>
     </ul>
     </div>
   </div>
@@ -61,7 +61,7 @@ wide: true   # wider page column so the two-across grid has room
     <div class="demo-text">
     <h3>DC Motor & Servo Control</h3>
     <ul>
-      <li><strong>DC motor:</strong> switch sets direction, pot sets PWM speed; motor power isolated from logic</li>
+      <li><strong>DC motor:</strong> switch sets direction, pot sets PWM speed. Motor power isolated from logic</li>
       <li><strong>Servos:</strong> positional (left/center/right) and continuous-rotation speed/direction control</li>
       <li><strong>Applied in <a href="/projects/goal-penalty-shootout/">GOAL!</a>:</strong> goalkeeper servo and rack-and-pinion run-up</li>
     </ul>
@@ -81,8 +81,8 @@ wide: true   # wider page column so the two-across grid has room
     <h3>Op-Amp Difference Amplifier</h3>
     <p>V<sub>out</sub> = V<sub>1</sub> − V<sub>2</sub> from two potentiometer inputs.</p>
     <ul>
-      <li><strong>Supply:</strong> dual ±9 V rails; output swings ~+9 V to −9 V</li>
-      <li><strong>Simulated in TinkerCAD:</strong> 8.99 V − 1.99 V → 7.00 V (shown); 4.00 V − 6.09 V → −2.09 V</li>
+      <li><strong>Supply:</strong> dual ±9 V rails → output swings ~+9 V to −9 V</li>
+      <li><strong>Simulated in TinkerCAD:</strong> 8.99 V − 1.99 V → 7.00 V (shown), 4.00 V − 6.09 V → −2.09 V</li>
       <li><strong>Main challenge:</strong> building the negative supply rail</li>
     </ul>
     </div>

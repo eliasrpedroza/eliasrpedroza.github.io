@@ -20,7 +20,7 @@ docs:
   - label: "Read the senior thesis (152 pp)"
     url: /assets/docs/iris-thesis.pdf
 results:
-  - "**Self-righting buoy:** metacentric height GM = +31.5 mm; stayed upright and well above the surface through wind chop in the bay"
+  - "**Self-righting buoy:** metacentric height GM = +31.5 mm. Stayed upright and well above the surface through wind chop in the bay"
   - "**3.33× depth safety factor:** acrylic tube rated to 100 m vs. the 30 m requirement"
   - "**Watertight on first assembly:** passed a 10–15 inHg vacuum test with < 0.5 inHg drop over 10 min"
   - "**Cellular through the dome:** 200+ lines of sensor data sent from the floating buoy with 0.5% loss"
@@ -59,8 +59,8 @@ The Robotic Systems Lab's REEF sensor network logs data on the Palos Verdes Reef
     <div class="demo-text">
     <h3>Final Assembly</h3>
     <ul>
-      <li><strong>Pressure vessel:</strong> 300 mm cast acrylic tube; polycarbonate dome on top holds the antenna above the waterline</li>
-      <li><strong>Bottom cap:</strong> aluminum, with ten M10 ports for Wet-Link penetrators; dual radial O-rings on both caps</li>
+      <li><strong>Pressure vessel:</strong> 300 mm cast acrylic tube. Polycarbonate dome on top holds the antenna above the waterline</li>
+      <li><strong>Bottom cap:</strong> aluminum, with ten M10 ports for Wet-Link penetrators. Dual radial O-rings on both caps</li>
       <li><strong>Depth:</strong> tube 100 m, dome 500 m, cap 1000 m → 3.33× safety factor at 30 m</li>
     </ul>
     </div>
@@ -72,7 +72,7 @@ The Robotic Systems Lab's REEF sensor network logs data on the Palos Verdes Reef
     <ul>
       <li><strong>Frame:</strong> anodized aluminum T-slot rails as the structural spine</li>
       <li><strong>Clamps:</strong> 6061-T6 anodized, rubber-lined, with 316 stainless hardware</li>
-      <li><strong>Custom mounts (my design):</strong> SLS nylon brackets that lock the tube clamps to the T-slot frame; one has a lug where the tether shackles attach. SLS handled the complex shape and needs no marine coating</li>
+      <li><strong>Custom mounts (my design):</strong> SLS nylon brackets that lock the tube clamps to the T-slot frame. One has a lug where the tether shackles attach. SLS handled the complex shape and needs no marine coating</li>
       <li><strong>Tether:</strong> two 316 stainless screw-pin shackles rated to 700 lb</li>
     </ul>
     </div>
@@ -106,11 +106,11 @@ The buoy has to float upright so the antenna stays above water. I checked this w
 | Metacentric radius, BM | 2.9 mm |
 | **Metacentric height, GM** | **31.5 mm (stable)** |
 
-About **91% of the righting ability comes from the low ballast** (KB − KG = 28.5 mm); the slender tube's waterplane adds only 2.9 mm. The ballast is **modular**: two 316 stainless weights bolt to the T-slot nuts, so they can be moved or swapped during integration to tune stability without redesigning any parts.
+About **91% of the righting ability comes from the low ballast** (KB − KG = 28.5 mm). The slender tube's waterplane adds only 2.9 mm. The ballast is **modular**: two 316 stainless weights bolt to the T-slot nuts, so they can be moved or swapped during integration to tune stability without redesigning any parts.
 
 ## Testing
 
-- **Vacuum leak test:** both enclosures were pulled to 10–15 inHg and had to lose less than 0.5 inHg in 10 minutes; the buoy passed as first assembled
+- **Vacuum leak test:** both enclosures were pulled to 10–15 inHg and had to lose less than 0.5 inHg in 10 minutes. The buoy passed as first assembled
 - **Stability and freeboard:** ballast height was tuned in the pool until the buoy reliably righted itself and sat high enough for the antenna
 
 <div class="demo-grid">
@@ -128,7 +128,7 @@ About **91% of the righting ability comes from the low ballast** (KB − KG = 28
     <div class="demo-text">
     <h3>Bay Deployment · Foster City</h3>
     <ul>
-      <li>5 full winch cycles in open water; the buoy stayed upright and well above the surface through wind chop and wall reflections</li>
+      <li>5 full winch cycles in open water. The buoy stayed upright and well above the surface through wind chop and wall reflections</li>
       <li>One person could deploy the whole system by lowering it on a rope</li>
     </ul>
     </div>
@@ -148,8 +148,8 @@ In the final end-to-end test in SCU's pool, IRIS ran its full cycle with no inte
     <h3>Winch & Brake</h3>
     <ul>
       <li><strong>Drive:</strong> Blue Trail SER-2130 submersible servo through an acetal gearbox. The controller commands it over <strong>CAN bus</strong> with a target number of turns, and reads back its magnetic-encoder position to confirm</li>
-      <li><strong>Brake:</strong> a titanium ratchet and spring pawl hold the positively buoyant buoy down; a second servo lifts the pawl only to release, so it draws no power while holding</li>
-      <li><strong>Build:</strong> acetal structure, 316 stainless hardware, polypropylene rope; 100 raise/lower cycles in a repeatability test (a deployment needs 24)</li>
+      <li><strong>Brake:</strong> a titanium ratchet and spring pawl hold the positively buoyant buoy down. A second servo lifts the pawl only to release, so it draws no power while holding</li>
+      <li><strong>Build:</strong> acetal structure, 316 stainless hardware, polypropylene rope. 100 raise/lower cycles in a repeatability test (a deployment needs 24)</li>
     </ul>
     </div>
   </div>

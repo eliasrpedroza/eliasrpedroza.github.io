@@ -12,8 +12,8 @@ experience:
     when: Mar – Sep 2026
     text: >-
       Diagnosed mechanical, electrical, and software failures on NEO humanoid
-      robots using inspection, terminal tools, and digital-twin visualization;
-      performed precision repairs from CAD and electrical schematics and tracked
+      robots using inspection, terminal tools, and digital-twin visualization.
+      Performed precision repairs from CAD and electrical schematics and tracked
       root causes through the full repair cycle.
     # image: /assets/img/about/neo.jpg      # optional photo shown beside the entry
     # image_credit: "Courtesy of 1X"
@@ -22,7 +22,7 @@ experience:
     org: Design for Assistive Robotic Technologies (DART) Lab
     location: Santa Clara University
     when: 2025 – 2026
-    text: Designed the laminar-jamming fingers and whiffletree for a low-cost prosthetic hand; co-author on the resulting paper, accepted to IEEE-RAS Humanoids 2026.
+    text: Designed the laminar-jamming fingers and whiffletree for a low-cost prosthetic hand. Co-author on the resulting paper, accepted to IEEE-RAS Humanoids 2026.
     project: /projects/prosthetic-fingers/
 
   - title: Thermal Engineer
