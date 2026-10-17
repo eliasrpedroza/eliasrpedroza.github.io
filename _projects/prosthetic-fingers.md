@@ -2,7 +2,7 @@
 title: Jamming-Based Prosthetic Hand
 context: Research · DART Lab, Santa Clara University
 summary: I designed the variable-stiffness fingers for a low-cost, body-powered prosthetic hand. Laminar-jamming joints are flexible for closing around an object, then lock rigid under vacuum to hold the grasp. Accepted to IEEE-RAS Humanoids 2026.
-order: 2
+order: 3
 wide: true
 thumb: /assets/img/projects/dart/thumb.jpg
 hero_side: true

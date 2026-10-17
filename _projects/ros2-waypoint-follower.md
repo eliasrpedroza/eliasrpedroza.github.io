@@ -2,7 +2,7 @@
 title: ROS 2 Waypoint Follower
 context: Course project · Embedded Systems in Robotics, Northwestern
 summary: A ROS 2 system that drives a simulated robot through a loop of waypoints with a feedback controller, while a second node injects noise into its motor commands. Built from scratch in Python with custom services and messages.
-order: 4
+order: 1
 thumb: /assets/img/projects/turtle/thumb.jpg
 preview: /assets/video/previews/turtle.mp4   # plays on the home-page card while hovered
 hero_video: /assets/video/turtle/waypoints.mp4

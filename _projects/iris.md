@@ -2,7 +2,7 @@
 title: "IRIS: Integrated Reef Information System"
 context: Senior Design · SCU Robotic Systems Lab
 summary: A buoy–winch system that waits safely below the surface, rises on a schedule to send reef sensor data over cellular, then retracts, with no divers needed. I designed the buoy that has to surface, stay upright, and keep its antenna above the water.
-order: 1
+order: 2
 featured: true
 wide: true
 thumb: /assets/img/projects/iris/card.jpg
