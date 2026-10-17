@@ -9,12 +9,12 @@ hero_video: /assets/video/turtle/waypoints.mp4
 hero_poster: /assets/video/turtle/waypoints.jpg
 hero_portrait: true
 hero_side: true
-hero_caption: One full lap through six waypoints. Pink markers point toward the next waypoint; the orange line is the path actually driven.
+hero_caption: "Load, start, pause, and resume through the /toggle service, then one full lap through six waypoints (2× speed while moving). Pink markers point to the next waypoint; orange is the path driven."
 timeline: Oct 2026
 tags: [ROS 2, Python, Feedback control, Linux]
 results:
   - "**Closed-loop control at 100 Hz** reaches every waypoint despite noise on every velocity command"
-  - "**One lap in 19.13 s**, driving 0.33 m less than the straight-line loop by cutting corners within the 0.04 m arrival tolerance"
+  - "**One lap in 19.13 s:** drove 32.86 m vs. the 33.19 m straight-line loop, cutting corners within the 0.04 m arrival tolerance"
   - "**Custom ROS 2 interfaces:** a service to load waypoints and a message reporting distance, error, and time each lap"
 ---
 
@@ -28,6 +28,16 @@ results:
 - **waypoint:** loads waypoints through a custom `LoadWaypoints` service, starts and stops on `/toggle`, and steers toward the current target using pose feedback
 - **corrupt:** sits between the controller and the robot and adds Gaussian noise proportional to each command, like motors that don't quite do what they're told
 - **Launch file:** starts all three nodes and sets each node's parameters (control rate, arrival tolerance, noise level, background color)
+
+## Running It
+
+**Start / stop:** each `/toggle` call flips the robot between moving and stopped, and the lap timer pauses while it's stopped.
+
+<figure><img src="/assets/img/projects/turtle/terminal-toggle.png" alt="Terminal showing a /toggle service call and its response"></figure>
+
+**Lap metrics:** after each lap the node publishes its custom `ErrorMetric` message: here 32.86 m driven, −0.33 m vs. the ideal loop, in 19.13 s of moving time.
+
+<figure><img src="/assets/img/projects/turtle/terminal-metrics.png" alt="ros2 topic echo /loop_metrics showing complete_loops 1, actual_distance 32.86, error -0.33, time 19.13"></figure>
 
 ## Controller
 
