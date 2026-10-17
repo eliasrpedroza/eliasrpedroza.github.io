@@ -23,7 +23,7 @@ role: "Finger subsystem: laminar-jamming flexures, molds, finger structure and t
 timeline: Jun 2025 – Jun 2026
 team: ["Sophie Jacqmotte-Parks", "Nicos Katigbak", "Parnia Ayoubi"]
 team_note: "Advised by Prof. Michael Abbott. Teammates led the palm and the published testing."
-tags: [Soft robotics, Silicone molding, 3D printing, MATLAB, SOLIDWORKS, Mechanical testing]
+tags: [Soft robotics, Silicone molding, Prototyping, MATLAB, SOLIDWORKS, Mechanical testing]
 results:
   - "**Working jamming finger:** holds a load rigidly under vacuum and springs back when released"
   - "**55% thinner flexures** after iterating geometry and paper grit"
