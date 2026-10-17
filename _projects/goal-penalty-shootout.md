@@ -13,7 +13,7 @@ hero_max_width: 680px   # keeps the landscape video from taking over the screen
 hero_caption: "Full match walkthrough: coin start, countdown, shots and saves, and the end-of-game sequence."
 timeline: Fall 2025 (graduate course project)
 team: ["Ysidro Magaña"]
-tags: [C++, Arduino Mega, SOLIDWORKS, Laser cutting, 3D printing, Servos]
+tags: [C++, Arduino Mega, Servos, Laser cutting, SOLIDWORKS, 3D printing]
 results:
   - "**Ran for 6 hours straight** at a public demo"
   - "**Fully autonomous gameplay:** 10 rounds, sudden death, automatic reset"

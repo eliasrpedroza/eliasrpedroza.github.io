@@ -18,7 +18,7 @@ hero_slides:
     alt: Landing gear mounted under the wing, extended
 hero_caption: The actuator swings the leg down while a servo opens the wheel hatch.
 timeline: Spring 2025
-tags: [SOLIDWORKS, FEA, Motion study, Torque analysis]
+tags: [FEA, Motion study, Torque analysis, SOLIDWORKS]
 results:
   - "**Retracting gear in CAD:** actuator-driven leg with a shock strut, plus a servo-driven hatch"
   - "**Drives sized:** 0.42 N·m to raise the leg in 2 s, 0.06 N·m for the hatch"

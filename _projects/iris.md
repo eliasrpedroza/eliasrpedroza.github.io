@@ -15,7 +15,7 @@ hero_caption: Bay deployment in Foster City. The buoy rides the wind chop and st
 role: "Buoy structure and surface stability: enclosure selection, structural design and materials, hydrostatic analysis, and water testing"
 timeline: Jun 2025 – Jun 2026 (senior thesis)
 team: ["Thatcher Steele-Maley", "Cooper McCarthy", "Zach Henderson", "Colin Friedel"]
-tags: [SOLIDWORKS, Python, Hydrostatic analysis, Marine materials, SLS printing, Water testing]
+tags: [Hydrostatic analysis, Python, Marine materials, SLS printing, SOLIDWORKS, Water testing]
 docs:
   - label: "Read the senior thesis (152 pp)"
     url: /assets/docs/iris-thesis.pdf
