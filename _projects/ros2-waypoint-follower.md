@@ -1,5 +1,5 @@
 ---
-title: ROS 2 Waypoint Follower
+title: Closed-Loop Waypoint Tracking
 context: Course project · Embedded Systems in Robotics, Northwestern
 summary: A ROS 2 system that drives a simulated robot through a loop of waypoints with a feedback controller, while a second node injects noise into its motor commands. Built from scratch in Python with custom services and messages.
 order: 1

@@ -66,4 +66,4 @@ results:
 
 We spent a lot of time trying to integrate the LiDAR for mapping and localization, but couldn't get it working reliably before the deadline. That left the run **open-loop**: the robot followed timed commands without knowing where it was, so small errors and a slightly off starting position built up over the course. Every leg had to be hand-tuned by trial and error, and that tuning time is a big part of why we ran out of time before the fourth target.
 
-Not being able to use the LiDAR or build a map is a big part of why I'm in Northwestern's MSR program now, learning the perception, mapping, and feedback control this robot was missing. My [ROS 2 waypoint follower](/projects/ros2-waypoint-follower/) is a first step: it steers from pose feedback instead of timed commands.
+Not being able to use the LiDAR or build a map is a big part of why I'm in Northwestern's MSR program now, learning the perception, mapping, and feedback control this robot was missing. My [closed-loop waypoint tracking project](/projects/ros2-waypoint-follower/) is a first step: it steers from pose feedback instead of timed commands.
