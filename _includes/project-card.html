@@ -1,4 +1,4 @@
-<a class="card" href="{{ p.url | relative_url }}">
+<a class="card{% if p.compact %} card--row{% endif %}" href="{{ p.url | relative_url }}">
   <div class="card-media">
     <img src="{{ p.thumb | relative_url }}" alt="{{ p.title }}" loading="lazy">
     {% if p.preview %}<video class="card-preview" data-src="{{ p.preview | relative_url }}" muted loop playsinline preload="none" aria-hidden="true"></video>{% endif %}
@@ -8,6 +8,6 @@
     <h3 class="card-title">{{ p.title }}</h3>
     <p class="card-summary">{{ p.summary }}</p>
     {% if p.tags %}<ul class="tags">{% for t in p.tags limit: 4 %}<li>{{ t }}</li>{% endfor %}</ul>{% endif %}
-    <span class="card-cta" aria-hidden="true">View project <span class="card-arrow">→</span></span>
+    {% unless p.compact %}<span class="card-cta" aria-hidden="true">View project <span class="card-arrow">→</span></span>{% endunless %}
   </div>
 </a>

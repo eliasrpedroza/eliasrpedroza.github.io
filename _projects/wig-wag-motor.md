@@ -1,8 +1,9 @@
 ---
 title: Wig Wag Motor
-context: Santa Clara University
+context: Machine Shop
 summary: An air-powered oscillating engine machined and assembled from engineering drawings.
 order: 10
+compact: true   # small landscape card, stacked with the other compact ones on the home page
 thumb: /assets/img/projects/wigwag/motor.jpg
 preview: /assets/video/previews/wigwag.mp4   # plays on the home-page card while hovered
 hero_video: /assets/video/wigwag/running.mp4

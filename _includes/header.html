@@ -4,7 +4,7 @@
     <nav class="nav" aria-label="Main">
       <a href="{{ '/' | relative_url }}#projects">Projects</a>
       <a href="{{ '/about/' | relative_url }}">About</a>
-      <a href="{{ site.resume | relative_url }}" target="_blank" rel="noopener">Resume</a>
+      <a href="{{ site.resume | relative_url }}?v={{ site.time | date: '%s' }}" target="_blank" rel="noopener">Resume</a>
       <span class="nav-icons">{% include social.html %}</span>
       <button class="theme-toggle" type="button" aria-label="Switch between light and dark mode" title="Light / dark mode">
         <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>

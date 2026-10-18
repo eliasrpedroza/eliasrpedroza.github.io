@@ -14,7 +14,17 @@ layout: default
   <p class="now-note"><span class="now-label">Now</span> M.S. in Robotics at Northwestern, taking Robotic Manipulation, Embedded Systems in Robotics (ROS 2), Machine Learning, and Machine Dynamics.</p>
 
   {% assign all = site.projects | sort: "order" %}
+  {% assign compact_count = 0 %}{% assign regular_count = 0 %}{% for p in all %}{% if p.compact %}{% assign compact_count = compact_count | plus: 1 %}{% else %}{% assign regular_count = regular_count | plus: 1 %}{% endif %}{% endfor %}
+  {% assign span_d = regular_count | modulo: 3 %}{% assign span_d = 3 | minus: span_d %}
+  {% assign span_t = regular_count | modulo: 2 %}{% assign span_t = 2 | minus: span_t %}
   <div class="grid">
-    {% for p in all %}{% include project-card.html %}{% endfor %}
+    {% for p in all %}{% unless p.compact %}{% include project-card.html %}{% endunless %}{% endfor %}
+    {% if compact_count > 0 %}
+    <!-- Projects with `compact: true` stack as short landscape cards, widened to fill the last row -->
+    <div class="card-stack span-d{{ span_d }} span-t{{ span_t }}">
+      <p class="stack-label">Other projects</p>
+      {% for p in all %}{% if p.compact %}{% include project-card.html %}{% endif %}{% endfor %}
+    </div>
+    {% endif %}
   </div>
 </section>

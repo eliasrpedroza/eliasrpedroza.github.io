@@ -182,6 +182,7 @@ Edit the sentence inside `<p class="now-note">` in `index.html` (it sits above t
 2. Copy `_templates/new-project.md` into `_projects/` and rename it, e.g. `_projects/ergodic-control.md`. **The file name becomes the URL:** `/projects/ergodic-control/`.
 3. Fill in the settings block and replace the placeholder sections.
 4. Set `order:` so it appears where you want, and renumber the other projects if needed.
+   - **Small projects:** add `compact: true` to show it as a short landscape card instead (like Swirl Pot, RC Landing Gear, and Wig Wag). Compact cards always sit together at the end of the grid, stacked, and they widen automatically to fill the last row. Remove the line to make it a full card again.
 5. Commit and push (or upload on the website).
 
 **MSR checklist:** video first, a one-sentence summary, a results box, short hierarchical sections, teammates named, and a repo link if there is one. The repo's README should link back to the page.
