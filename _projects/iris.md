@@ -11,16 +11,16 @@ hero_video: /assets/video/iris-swaying.mp4
 hero_poster: /assets/video/iris-swaying.jpg
 hero_portrait: true
 hero_side: true   # smaller video, placed beside the Results box
-hero_caption: Bay deployment in Foster City. The buoy rides the wind chop and stays upright, with its dome and cellular antenna above the surface.
+hero_caption: Bay deployment in Foster City. The buoy rides the waves and stays upright, with its dome and cellular antenna above the surface.
 role: "Buoy structure and surface stability: enclosure selection, structural design and materials, hydrostatic analysis, and water testing"
 timeline: Jun 2025 – Jun 2026 (senior thesis)
 team: ["Thatcher Steele-Maley", "Cooper McCarthy", "Zach Henderson", "Colin Friedel"]
-tags: [Hydrostatic analysis, Python, Marine materials, SLS printing, SOLIDWORKS, Water testing]
+tags: [Hydrostatic analysis, MATLAB, Marine materials, SLS printing, SOLIDWORKS]
 docs:
   - label: "Read the senior thesis (152 pp)"
     url: /assets/docs/iris-thesis.pdf
 results:
-  - "**Self-righting buoy:** metacentric height GM = +31.5 mm. Stayed upright and well above the surface through wind chop in the bay"
+  - "**Self-righting buoy:** metacentric height GM = +31.5 mm. Stayed upright and well above the surface in choppy bay water"
   - "**3.33× depth safety factor:** acrylic tube rated to 100 m vs. the 30 m requirement"
   - "**Watertight on first assembly:** passed a 10–15 inHg vacuum test with < 0.5 inHg drop over 10 min"
   - "**Cellular through the dome:** 200+ lines of sensor data sent from the floating buoy with 0.5% loss"
@@ -128,7 +128,7 @@ About **91% of the righting ability comes from the low ballast** (KB − KG = 28
     <div class="demo-text">
     <h3>Bay Deployment · Foster City</h3>
     <ul>
-      <li>5 full winch cycles in open water. The buoy stayed upright and well above the surface through wind chop and wall reflections</li>
+      <li>5 full winch cycles in open water. The buoy stayed upright and well above the surface through choppy water and waves bouncing off the walls</li>
       <li>One person could deploy the whole system by lowering it on a rope</li>
     </ul>
     </div>
