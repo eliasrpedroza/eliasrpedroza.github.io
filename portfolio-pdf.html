@@ -1,0 +1,70 @@
+---
+layout: print
+title: Portfolio PDF
+permalink: /portfolio-pdf/
+sitemap: false
+# ✏️ The text at the top of the PDF. Everything below it comes from the project files automatically.
+intro: "My work sits between hardware and software: designing mechanisms, building and debugging electromechanical systems, and now learning the controls and manipulation that make them useful."
+---
+{% assign all = site.projects | sort: "order" %}
+{% assign site_short = site.url | remove: "https://" %}
+
+<p class="screen-note">This page builds the PDF portfolio. To export it: <strong>Ctrl/Cmd + P</strong> → Destination <strong>Save as PDF</strong> → More settings: Margins <strong>Default</strong>, <strong>Background graphics</strong> on.</p>
+
+<div class="sheet">
+  <header class="pf-head">
+    <div class="pf-id">
+      <h1>Elias Pedroza</h1>
+      <p class="pf-degrees">M.S. Robotics · Northwestern University<br>B.S. Mechanical Engineering · Santa Clara University</p>
+      <p class="pf-intro">{{ page.intro }}</p>
+      <p class="pf-contact">
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a><span>·</span>
+        <a href="https://www.linkedin.com/in/{{ site.linkedin }}">linkedin.com/in/{{ site.linkedin }}</a><span>·</span>
+        <a href="{{ site.url }}">{{ site_short }}</a>
+      </p>
+    </div>
+    <a class="pf-qr" href="{{ site.url }}">
+      <img src="{{ '/assets/img/qr-site.svg' | relative_url }}" alt="QR code linking to {{ site_short }}">
+      <span>Full portfolio,<br>videos &amp; details</span>
+    </a>
+  </header>
+
+  <h2 class="pf-label">Selected projects</h2>
+
+  {% for p in all %}{% unless p.compact or p.pdf == false %}
+  {% assign results = p.pdf_results | default: p.results %}
+  {% assign img = p.pdf_image | default: p.thumb %}
+  {% assign when = p.timeline | split: " (" | first %}
+  <article class="pf-proj">
+    <div class="pf-media">
+      <a href="{{ site.url }}{{ p.url }}"><img src="{{ img | relative_url }}" alt="{{ p.title }}"></a>
+      <a class="pf-link" href="{{ site.url }}{{ p.url }}">View project page</a>
+    </div>
+    <div class="pf-body">
+      <p class="pf-meta"><span>{{ p.context }}</span>{% if when %}<span class="pf-when">{{ when }}</span>{% endif %}</p>
+      <h3><a href="{{ site.url }}{{ p.url }}">{{ p.title }}</a></h3>
+      <p class="pf-summary">{{ p.pdf_summary | default: p.summary }}</p>
+      {% if p.role or p.team %}<p class="pf-team">
+        {% if p.role %}<strong>My role:</strong> {{ p.role }}{% if p.team %}<br>{% endif %}{% endif %}
+        {% if p.team %}{% if p.team.size > 4 %}<strong>Team of {{ p.team.size | plus: 1 }}</strong>{% else %}<strong>With</strong> {{ p.team | array_to_sentence_string }}{% endif %}{% endif %}
+      </p>{% endif %}
+      {% if results %}<ul class="pf-results">{% for r in results limit: 4 %}<li>{{ r | markdownify | remove: "<p>" | remove: "</p>" | replace: 'href="/', 'href="https://eliasrpedroza.github.io/' }}</li>{% endfor %}</ul>{% endif %}
+      {% if p.tags %}<ul class="pf-tags">{% for t in p.tags limit: 5 %}<li>{{ t }}</li>{% endfor %}</ul>{% endif %}
+    </div>
+  </article>
+  {% endunless %}{% endfor %}
+
+  <section class="pf-other">
+    <h2 class="pf-label">Other projects</h2>
+    <div class="pf-other-grid">
+      {% for p in all %}{% if p.compact %}{% unless p.pdf == false %}
+      <a class="pf-mini" href="{{ site.url }}{{ p.url }}">
+        <img src="{{ p.pdf_image | default: p.thumb | relative_url }}" alt="{{ p.title }}">
+        <span class="pf-meta">{{ p.context }}</span>
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.pdf_summary | default: p.summary }}</p>
+      </a>
+      {% endunless %}{% endif %}{% endfor %}
+    </div>
+  </section>
+</div>

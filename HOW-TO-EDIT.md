@@ -189,6 +189,27 @@ Edit the sentence inside `<p class="now-note">` in `index.html` (it sits above t
 
 ---
 
+## PDF portfolio
+For applications that want a PDF instead of a link. It's built from the same project files, so it stays up to date on its own.
+
+**To export a fresh copy:** open `eliasrpedroza.github.io/portfolio-pdf/` in **Chrome**, press **Ctrl/Cmd + P**, choose **Save as PDF**, and under More settings set Margins to **Default** and turn **Background graphics** on. Name it `Elias_Pedroza_Portfolio.pdf`.
+
+What ends up in it:
+- **Selected projects:** every project in `order:` order, with its card image, summary, role, team, first 4 results, and first 5 tags.
+- **Other projects:** the ones marked `compact: true`, as small cards at the end.
+
+Optional settings for a project's front matter:
+```yaml
+pdf: false                  # leave this project out of the PDF
+pdf_image: /assets/img/...  # use a different picture than the home-page card
+pdf_summary: "..."          # shorter summary just for the PDF
+pdf_results:                # different results just for the PDF
+  - "**Bold part** then normal text"
+```
+The intro sentence at the top is in `portfolio-pdf.html`. The styling is in `assets/css/print.css`. Each project stays whole on a page, so adding one may push the last section onto a new page. That's expected.
+
+---
+
 ## Changing the look
 
 All colors are defined at the top of `assets/css/style.css`:
