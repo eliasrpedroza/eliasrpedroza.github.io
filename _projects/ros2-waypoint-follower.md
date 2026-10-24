@@ -2,7 +2,8 @@
 title: Closed-Loop Waypoint Tracking
 context: Course project · Embedded Systems in Robotics, Northwestern
 summary: A ROS 2 system that drives a simulated robot through a loop of waypoints with a feedback controller, while a second node injects noise into its motor commands. Built from scratch in Python with custom services and messages.
-order: 1
+order: 5
+pdf: false   # left out of the PDF portfolio (the Brick-Catching Robot covers the same class)
 thumb: /assets/img/projects/turtle/thumb.jpg
 preview: /assets/video/previews/turtle.mp4   # plays on the home-page card while hovered
 hero_video: /assets/video/turtle/waypoints.mp4
@@ -17,6 +18,8 @@ results:
   - "**One lap in 19.13 s:** drove 32.86 m vs. the 33.19 m straight-line loop, cutting corners within the 0.04 m arrival tolerance"
   - "**Custom ROS 2 interfaces:** a service to load waypoints and a message reporting distance, error, and time each lap"
 ---
+
+The first ROS 2 project in the class. The [Brick-Catching Robot](/projects/brick-catcher/) builds on it.
 
 ## System
 

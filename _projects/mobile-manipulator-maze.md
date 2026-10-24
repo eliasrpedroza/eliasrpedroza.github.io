@@ -2,7 +2,7 @@
 title: Mobile Manipulator Maze Challenge
 context: Robotics Final Project · Santa Clara University
 summary: A mobile robot with a 6-DOF arm that drives through a block maze, picks up socks, and drops them on QR-code targets with no teleoperation.
-order: 5
+order: 6
 thumb: /assets/img/projects/maze/thumb.jpg
 hero_side: true
 hero_slides_ratio: 1 / 1
