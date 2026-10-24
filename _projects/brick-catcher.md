@@ -12,7 +12,7 @@ hero_caption: "A brick is placed in the air, then dropped. The robot works out t
 timeline: Oct 2026
 tags: [ROS 2, Python, URDF, tf2, Automated testing]
 results:
-  - "**Catch or skip?** The robot decides from the brick's fall time vs. how far the it can drive in that time"
+  - "**Catch or skip?** The robot decides from the brick's fall time vs. how far it can drive in that time"
   - "**Odometry-based control:** the controller never sees the robot's true position. It estimates it from wheel angles and drives at 100 Hz"
   - "**Automated tests:** unit tests for the physics + launch tests that drop a brick and verify that it lands, slides off, and freezes in space"
 ---
