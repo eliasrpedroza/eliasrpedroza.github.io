@@ -3,7 +3,7 @@ title: Brick-Catching Robot
 context: Course project · Embedded Systems in Robotics, Northwestern
 summary: A simulated robot in ROS 2 that decides if it can reach a falling brick in time, catches it, and tips it off. The physics, control, and decision-making run as separate nodes.
 order: 1
-thumb: /assets/img/projects/brickbot/cover.jpg
+thumb: /assets/img/projects/brickbot/cover.png
 preview: /assets/video/previews/brickbot-drops.mp4   # plays on the home-page card while hovered
 hero_video: /assets/video/brickbot/drops.mp4
 hero_poster: /assets/video/brickbot/drops.jpg
@@ -33,13 +33,13 @@ When the brick starts falling, the catcher has one shot at the decision. The tim
 
 <div class="demo-grid">
   <div class="demo">
-    <a class="demo-media-link demo-media-link--fit" style="background: #2a2a2a" href="/assets/img/projects/brickbot/unreachable-drop4.jpg"><img class="demo-media" src="/assets/img/projects/brickbot/unreachable-drop4.jpg" alt="RViz showing the robot far from a brick on the ground, with an Unreachable label in the air"></a>
-    <div class="demo-text"><h3>Out of reach</h3><p>Drop 4 from the video. The brick would hit the ground before the robot could get there, so it doesn't bother to try.</p></div>
+    <a class="demo-media-link" href="/assets/img/projects/brickbot/unreachable.png"><img class="demo-media" src="/assets/img/projects/brickbot/unreachable.png" alt="RViz showing the robot far from a brick on the ground, with an Unreachable label in the air"></a>
+    <div class="demo-text"><h3>Out of reach</h3><p>The brick lands too far away for the robot to get there in time, so it doesn't bother to try.</p></div>
   </div>
   <div class="demo">
     <div class="demo-media slideshow" data-interval="3000">
-      <a class="slide is-active" href="/assets/img/projects/brickbot/big-robot-zero.jpg" data-label="big_robot.yaml"><img src="/assets/img/projects/brickbot/big-robot-zero.jpg" alt="The larger robot configuration in RViz next to the joint state sliders, all at zero"></a>
-      <a class="slide" href="/assets/img/projects/brickbot/big-robot-moved.jpg" data-label="Moving the joints"><img src="/assets/img/projects/brickbot/big-robot-moved.jpg" alt="The larger robot with the platform tilted, stem turned, and wheel rotated using the joint state sliders"></a>
+      <a class="slide is-active" href="/assets/img/projects/brickbot/big-robot-zero.png" data-label="big_robot.yaml"><img src="/assets/img/projects/brickbot/big-robot-zero.png" alt="The larger robot configuration in RViz next to the joint state sliders, all at zero"></a>
+      <a class="slide" href="/assets/img/projects/brickbot/big-robot-moved.png" data-label="Moving the joints"><img src="/assets/img/projects/brickbot/big-robot-moved.png" alt="The larger robot with the platform tilted, stem turned, and wheel rotated using the joint state sliders"></a>
     </div>
     <div class="demo-text"><h3>Same code, bigger robot</h3><p>Platform height, size, wheel radius, and top speed live in one YAML file. The URDF and every node read it, so swapping in <code>big_robot.yaml</code> changes everything at once. The sliders move the platform tilt (alpha), steering (theta), and wheel (phi).</p></div>
   </div>
