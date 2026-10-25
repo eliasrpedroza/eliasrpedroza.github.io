@@ -13,7 +13,7 @@ hero_portrait: true
 hero_side: true   # smaller video, placed beside the Results box
 hero_caption: Bay deployment in Foster City. The buoy rides the waves and stays upright, with its dome and cellular antenna above the surface.
 role: "Buoy structure and surface stability: enclosure selection, structural design and materials, hydrostatic analysis, and water testing"
-timeline: Jun 2025 – Jun 2026 (senior thesis)
+timeline: Oct 2025 – May 2026 (senior thesis)
 team: ["Thatcher Steele-Maley", "Cooper McCarthy", "Zach Henderson", "Colin Friedel"]
 tags: [Hydrostatic analysis, MATLAB, Marine materials, SLS printing, SOLIDWORKS]
 docs:
