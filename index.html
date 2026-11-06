@@ -11,7 +11,8 @@ layout: default
 </section>
 
 <section id="projects" class="wrap">
-  <p class="now-note"><span class="now-label">Now</span> M.S. in Robotics at Northwestern, taking Robotic Manipulation, Embedded Systems in Robotics (ROS 2), Machine Learning, and Machine Dynamics.</p>
+  <p class="now-note"><span class="now-label">Now</span> M.S. in Robotics at Northwestern, taking Robotic Manipulation, Embedded Systems (ROS&nbsp;2), Machine Learning, and Lagrangian Dynamics.</p>
+  <p class="now-note"><span class="now-label">Next</span> Winter 2027: Sensing, Navigation &amp; ML for Robotics (SLAM), Mechatronics, Physical Intelligence &amp; Embodied AI, and a new project.</p>
 
   {% assign all = site.projects | sort: "order" %}
   {% assign compact_count = 0 %}{% assign regular_count = 0 %}{% for p in all %}{% if p.compact %}{% assign compact_count = compact_count | plus: 1 %}{% else %}{% assign regular_count = regular_count | plus: 1 %}{% endif %}{% endfor %}

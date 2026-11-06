@@ -136,9 +136,11 @@ h1, h2, h3 { line-height: 1.2; letter-spacing: -0.015em; }
 
 /* "Now" line above the project grid */
 .now-note { margin: 0 0 22px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--ink-2); font-size: 15px; }
+/* A second line (e.g. "Next") sits right under the first, sharing its top rule */
+.now-note + .now-note { margin-top: -12px; padding-top: 0; border-top: 0; }
 .now-note a { color: var(--accent); text-decoration: none; font-weight: 500; }
 .now-note a:hover { text-decoration: underline; }
-.now-label { font: 500 11.5px/1 var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--accent); background: var(--accent-soft); padding: 5px 8px; border-radius: 999px; margin-right: 8px; vertical-align: 1px; }
+.now-label { font: 500 11.5px/1 var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--accent); background: var(--accent-soft); padding: 5px 8px; border-radius: 999px; margin-right: 8px; vertical-align: 1px; display: inline-block; min-width: 4.6em; text-align: center; }
 
 .tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
 .tags li {

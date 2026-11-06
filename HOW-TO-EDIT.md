@@ -175,7 +175,7 @@ Add entries under `photos:` in `_data/about.yml`. A clip works too: add a `video
 ---
 
 ### The "Now" line on the home page
-Edit the sentence inside `<p class="now-note">` in `index.html` (it sits above the project cards), e.g. to name a project you're building. Delete the whole line to remove it.
+Edit the sentences inside the two `<p class="now-note">` lines in `index.html` (they sit above the project cards): **Now** for this quarter, **Next** for the coming one. Change the word inside `<span class="now-label">` to relabel a line, and delete a whole line to remove it. When the quarter turns over, move the Next classes up into Now and write a new Next line.
 
 ## Adding a new project
 1. Create a folder for its media: `assets/img/projects/<name>/`, and upload the photos there.
